@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Modbus TCP-IP - WRSimulateur</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../">WRSimulateur</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../" class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../simulator/" class="nav-link">Simulateur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../library/" class="nav-link">Bibliothèque simulable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../synoptic/" class="nav-link">Synoptique</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Modbus TCP-IP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../plc/" class="nav-link">Automate programmable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../hmi/" class="nav-link">Interface Homme machine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../speed_controller/" class="nav-link">Variateur de vitesse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../grapher/" class="nav-link">Grapheur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../errors/" class="nav-link">Liste avertissements</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../synoptic/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../plc/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#modbustcp-ip" class="nav-link">Modbus/Tcp-IP</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#preambule" class="nav-link">Préambule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#codes-fonction-modbus-supportes" class="nav-link">Codes fonction MODBUS supportés</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mappage-modbus" class="nav-link">Mappage MODBUS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuration-modbus" class="nav-link">Configuration MODBUS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="modbustcp-ip">Modbus/Tcp-IP</h1>
+<h2 id="preambule">Préambule</h2>
+<ul>
+<li>Le simulateur intègre le protocole bus de terrain MODBUS/TCP-IP qui est une variante du MODBUS série proposé par la société MODICON depuis 1979.</li>
+<li>La variante TCP-IP encapsule le protocole MODBUS dans le protocole Ethernet.</li>
+<li>
+<p>Cette encapsulation permet aux constructeurs d'utiliser MODBUS sur toute l'infrastructure matérielle Ethernet</p>
+</li>
+<li>
+<p>MODBUS TCP-IP présente des avantages déterminants :</p>
+<ul>
+<li>c'est le protocole Ethernet Industriel le plus employé dans le monde,</li>
+<li>les <a href="../../assets/Modbus_Application_Protocol_V1_1b.pdf">spécifications</a> sont facilement disponibles, </li>
+<li>il est taillé pour réaliser l'échange rapide de petites quantités de données.</li>
+</ul>
+</li>
+</ul>
+<h2 id="codes-fonction-modbus-supportes">Codes fonction MODBUS supportés</h2>
+<ul>
+<li>code 03 (0x03) Read Holding Registers<ul>
+<li>Ce code de fonction est utilisé pour lire le contenu d'un bloc contigu de registres de la mémoire automate. La requête spécifie l'adresse du registre de départ et le nombre de registres. Dans la requête, les registres sont adressés en commençant à zéro. Ainsi, les registres numérotés de 1 à 16 sont adressés comme 0 à 15.</li>
+<li>Les données des registres dans le message de réponse sont compactées sous forme de deux octets par registre, avec le contenu binaire justifié à droite dans chaque octet. Pour chaque registre, le premier octet contient les bits de poids fort et le second contient les bits de poids faible .
+<img alt="" src="../media/request3.png" /></li>
+</ul>
+</li>
+<li>code 16 (0x10) Write Multiple Registers<ul>
+<li>Ce code de fonction est utilisé pour écrire un bloc de registres contigus (1 à 123 registres) dans dans la mémoire automate.Les valeurs à écrire sont spécifiées dans le champ de données de la requête. Les données sont compactées sous forme de deux octets par registre.</li>
+<li>La réponse normale renvoie le code de fonction, l'adresse de départ, et la quantité de registres écrits.
+<img alt="" src="../media/request16.png" /></li>
+</ul>
+</li>
+<li>code 23 (0x17) Read/Write Multiple Registers<ul>
+<li>Ce code de fonction effectue une combinaison d'une opération de lecture et d'une opération d'écriture dans une seule transaction MODBUS. L'opération d'écriture est effectuée avant l'opération de lecture.</li>
+<li>Les registres de la mémoire automate sont adressés en commençant à zéro. Ainsi, les registres 1 à 16 sont adressés dans l'automate comme 0 à 15.</li>
+<li>La requête spécifie l'adresse de départ et le nombre de registres de la mémoire automate à lire, ainsi que l'adresse de départ, le nombre de registres de la mémoire automate et les données à écrire. Le champ <strong>WriteByteCount</strong> spécifie le nombre d'octets qui suivent dans le champ de données à écrire.</li>
+<li>La réponse normale contient les données du groupe de registres qui ont été lus. Le champ <strong>ByteCount</strong> spécifie la quantité d'octets à suivre dans le champ de données lues.
+<img alt="" src="../media/request23.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="mappage-modbus">Mappage MODBUS</h2>
+<p><img alt="" src="../media/mappage_modbus.png" /></p>
+<h2 id="configuration-modbus">Configuration MODBUS</h2>
+<p><img alt="" src="../media/modbus_config.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adresse_ip</td>
+<td>localhost/127.0.0.1/192.168.0.10</td>
+<td>adresse IP du serveur API</td>
+</tr>
+<tr>
+<td>port</td>
+<td>502</td>
+<td>port normalisé MODBUS</td>
+</tr>
+<tr>
+<td>ID_unite</td>
+<td>111</td>
+<td>identifiant du client</td>
+</tr>
+<tr>
+<td>adresse_table_echange</td>
+<td>400</td>
+<td>pointeur sur la table d'échange</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Si l'objet de configuration MODBUS n'est pas placé dans votre projet, les valeurs utilisées par défaut sont : adresse_ip = local_host, port = 502, adresse_table_echange = 400 et ID_unite = 111.</p>
+</li>
+<li>
+<p>L'objet de configuration MODBUS est requis  uniquement lorsqu'un automate programmable est présent dans un folio.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

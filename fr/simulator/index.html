@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Simulateur - WRSimulateur</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../">WRSimulateur</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../" class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Simulateur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../library/" class="nav-link">Bibliothèque simulable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../synoptic/" class="nav-link">Synoptique</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../modbus/" class="nav-link">Modbus TCP-IP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../plc/" class="nav-link">Automate programmable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../hmi/" class="nav-link">Interface Homme machine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../speed_controller/" class="nav-link">Variateur de vitesse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../grapher/" class="nav-link">Grapheur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../errors/" class="nav-link">Liste avertissements</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../library/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#simulateur" class="nav-link">Simulateur</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#integration-dans-winrelais" class="nav-link">Intégration dans WinRelais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#restrictions" class="nav-link">Restrictions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#blocs-de-configuration-generaux" class="nav-link">Blocs de configuration généraux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="simulateur">Simulateur</h1>
+<h2 id="integration-dans-winrelais">Intégration dans WinRelais</h2>
+<ul>
+<li>
+<p>Le simulateur est actif par défaut. L'activation paramètre WinRelais avec les réglages suivants (<strong>Outils/Options</strong>) :
+<img alt="" src="../media/wrs_options.png" /></p>
+</li>
+<li>
+<p>La touche clavier <strong>k</strong> permet d'afficher/cacher les textures appliquées aux objets simulables :
+<img alt="" src="../media/k_key.png" /></p>
+</li>
+<li>
+<p>Le lancement du simulateur est réalisé en cliquant sur l'icône :
+<img alt="" src="../media/launch_icon.png" /></p>
+</li>
+<li>
+<p>un clic droit sur un objet simulable permet :</p>
+<ul>
+<li>d'éditer ses propriétés,</li>
+<li>d'effectuer une rotation au degré près des objets synoptiques et vérins.
+<img alt="" src="../media/right_click.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="restrictions">Restrictions</h2>
+<h3 id="modele-numerique">Modèle numérique</h3>
+<ul>
+<li>Les charges mécaniques appliquées aux actionneurs (vérins, moteurs) sont fixes. Elles correspondent au point de fonctionnement nominal des actionneurs.</li>
+<li>Les transitoires des courants et des tensions ne sont pas simulées.</li>
+<li>La fréquence maximale d'acquisition des appareils de mesure est limitée à 50Hz (1 mesure toutes les 20 ms).</li>
+<li>Les mesures sont données en valeur efficace ou moyenne uniquement.</li>
+</ul>
+<h3 id="edition-des-schemas">Edition des schémas</h3>
+<ul>
+<li>Il n'existe pas pour l'instant de 'moulinette' pour convertir des schémas antérieurs en schémas simulables.</li>
+<li>L'épaisseur des traits pour les conducteurs est fixe.</li>
+<li>Seule la police de caractères 'Arial' est supportée.</li>
+<li>L'alignement de texte supporté est 'gauche' uniquement.</li>
+<li>Les caractères gras et italiques sont transformés en caractères normaux.</li>
+<li>Les cadres et les cartouches de folio ne sont pas dessinés dans le simulateur.</li>
+<li>Une seule taille de symbole est utilisable : la taille 'normale'.</li>
+</ul>
+<h3 id="edition-des-symboles-dans-winsymbole">Edition des symboles dans WinSymbole</h3>
+<p>Certaines fonctionnalités graphiques proposées par WinSymbole ne sont pas prises en compte par le simulateur :</p>
+<ul>
+<li>Pas de courbe de Bézier, ni de texte, cercle non rempli uniquement,</li>
+<li>Epaisseur des contours fixe</li>
+<li>Pas de graphique SVG</li>
+<li>Pas d'image d'arrière plan</li>
+<li>Pas de mini-dessin.</li>
+</ul>
+<h3 id="anomalie-dedition-dun-symbole">Anomalie d'édition d'un symbole</h3>
+<ul>
+<li><img alt="" src="../media/image3.png" /><img alt="" src="../media/image4.png" /></li>
+<li>Il peut arriver qu'un décalage de la texture et de la forme de collision survienne suite à la rotation d'un symbole dans WinRelais. Il est alors nécessaire de recentrer
+  l'origine du symbole dans WinSymbole. (Voir <strong>page 17</strong> sur la question du barycentre)</li>
+<li>Il est préférable de mener la rotation plutôt dans WinSymbole, d'ajuster avec soin le barycentre puis de sauver le symbole pour réutilisation.</li>
+</ul>
+<h2 id="blocs-de-configuration-generaux">Blocs de configuration généraux</h2>
+<p><img alt="" src="../media/image38.png" /></p>
+<p>Ce bloc ajuste certains détails d'affichage du folio courant, il est essentiellement utilisé à des fins de mise au point :</p>
+<p><img alt="" src="../media/image39.png" /></p>
+<ul>
+<li><strong>collisions</strong> = (False/True) : visualise les formes de collision des objets physiques,</li>
+<li><strong>sensors_collisions</strong> = (False/True) : visualise les formes de collision des détecteurs et des fins de course,</li>
+<li><strong>wrs_equips</strong> = (False/True) : visualise les numéros des équipotentiels définis par le simulateur,</li>
+<li><strong>wr_equips</strong> = (False/True) : visualise les numéros des équipotentiels définis dans WinRelais,</li>
+<li><strong>terminals_nums</strong> = (False/True) : visualise les numéros de bornes des appareils.</li>
+</ul>
+<p><img alt="" src="../media/image40.png" /></p>
+<p>Les blocs <strong>World_Settings</strong> définissent le comportement du moteur physique 2D. Il est possible d'ajuster le moteur en :</p>
+<ul>
+<li>vue de dessus (Top view) : la gravité n'est pas prise en compte,</li>
+<li>vue de côté (Side view) : la gravité est prise en compte.</li>
+</ul>
+<p>On ne peut placer qu'un seul bloc <strong>World_Settings</strong> par folio. Il est possible d'avoir des vues différentes d'un folio à l'autre, par exemple :</p>
+<ul>
+<li>un folio avec un espace physique décrit en vue de dessus,</li>
+<li>le folio suivant avec un espace physique en vue de côté.</li>
+</ul>
+<p>Le coefficient de '<strong>damping</strong>', compris entre 0 et 1, simule la friction de l'air qui s'exerce sur un mobile.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

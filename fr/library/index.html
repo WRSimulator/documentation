@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Bibliothèque simulable - WRSimulateur</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../">WRSimulateur</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../" class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../simulator/" class="nav-link">Simulateur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Bibliothèque simulable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../synoptic/" class="nav-link">Synoptique</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../modbus/" class="nav-link">Modbus TCP-IP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../plc/" class="nav-link">Automate programmable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../hmi/" class="nav-link">Interface Homme machine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../speed_controller/" class="nav-link">Variateur de vitesse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../grapher/" class="nav-link">Grapheur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../errors/" class="nav-link">Liste avertissements</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../simulator/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../synoptic/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#bibliotheque-simulable" class="nav-link">Bibliothèque simulable</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#accessibilite" class="nav-link">Accessibilité</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creer-un-symbole-a-partir-dun-symbole-existant" class="nav-link">Créer un symbole à partir d'un symbole existant</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modes-de-dessin-par-famille-de-symboles" class="nav-link">Mode(s) de dessin par famille de symboles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parametrage-des-composants-generaux" class="nav-link">Paramétrage des composants généraux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#signaletique-des-composants-electriques" class="nav-link">Signalétique des composants électriques:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="bibliotheque-simulable">Bibliothèque simulable</h1>
+<h2 id="accessibilite">Accessibilité</h2>
+<p>WinRelais expose la bibliothèque des composants simulables (dossier D4) selon trois méthodes :
+<img alt="" src="../media/methods.png" /></p>
+<p>L'explorateur permet d'accéder facilement au dossier blocs_simulables qui permet de récupérer des sous-ensembles de simulation complets :
+<img alt="" src="../media/bloc.png" /></p>
+<h3 id="methode-1-placer-un-symbole">Méthode 1 : placer un symbole</h3>
+<p><img alt="" src="../media/place_symbol.png" /></p>
+<h3 id="methode-2-chercher-et-placer-un-symbole">Méthode 2 : chercher et placer un symbole</h3>
+<p><img alt="" src="../media/question_symbol.png" /></p>
+<h3 id="explorateur-explorer-et-placer-un-symbole-par-glisser-deposer">Explorateur : explorer et placer un symbole par glisser-déposer</h3>
+<p><img alt="" src="../media/explorateur.png" /></p>
+<h2 id="creer-un-symbole-a-partir-dun-symbole-existant">Créer un symbole à partir d'un symbole existant</h2>
+<p>Il est possible de décliner un nouveau symbole à partir d'un symbole existant pour adapter son dessin et la disposition des bornes selon les besoins. Le nouveau symbole héritera de toute la logique de simulation du symbole père.
+Le visuel du symbole peut-être défini avec WinSymbole ou avec une image (appelée aussi texture) au format png.</p>
+<p>Contraintes :</p>
+<ul>
+<li>Le nom des broches ne doit pas être modifié.</li>
+<li>Le nombre de broches ne doit pas changer.</li>
+</ul>
+<p><strong>Exemple 1</strong> : On souhaite créer un symbole d'ampèremètre de forme carrée.</p>
+<ol>
+<li>Placer le symbole 'amperemetre' sur le folio.</li>
+<li>Aller dans Modifier un symbole\Avancé\Exécuter WinSymbole.</li>
+<li>Modifier le symbole à sa convenance dans WinSymbole. Enregistrer la modification (Ctrl-S).</li>
+<li>Accepter les modifications.</li>
+<li>Sauver le symbole dans la bibliothèque '_InstrumentsDeMesure' en le nommant 'amperemetre<strong>#</strong>carre'.
+(Ne pas utiliser de caractères accentués pour nommer les symboles)</li>
+</ol>
+<p>Il est très important de garder le même nom de départ, 'amperemetre' dans l'exemple, puis d'ajouter le  caractère '<strong>#</strong>' suivi du nom de son choix.
+Le symbole '<strong>#</strong>' indique au simulateur que le nouveau symbole 'carre' est une déclinaison du symbole 'amperemetre'.</p>
+<p><img alt="" src="../media/12345.png" /></p>
+<p><strong>Exemple 2</strong> : On souhaite ajouter un symbole d'électrovanne à la famille
+'<strong>_Bobines'</strong> qu'on appellera '<strong>electrovanne#1</strong>'.</p>
+<p>L'opération est plus longue que dans l'exemple précédent car il faut créer le dessin du symbole quand il est actif. Le dessin des symboles actifs sont rangés dans le fichier :
+<strong>C:\Users\Public\Documents\Elec-CAO\wrs-data\wrs-on-symbols.xrs</strong></p>
+<ol>
+<li>Placer le symbole '<strong>electrovanne</strong>' de la famille '<strong>_Bobines'</strong> sur le folio.</li>
+<li>Modifier le symbole comme dit aux points 2.3 et 4 de l'exemple 1.</li>
+<li>Sauver le symbole dans la bibliothèque ''<strong>_Bobines</strong> en le nommant '<strong>electrovanne #1</strong>'.</li>
+<li>Ouvrir le schéma '<strong>wrs-on-symbols.xrs'</strong> dans WinRelais. Sélectionner de préférence le folio '_bobines' .</li>
+<li>Placer le symbole fraichement enregistré '<strong>electrovanne #1</strong>' sur le folio.</li>
+<li>Aller dans Modifier un symbole\Avancé\Exécuter WinSymbole.</li>
+<li>Modifier le symbole à sa convenance dans WinSymbole. Enregistrer la modification (Ctrl-S).</li>
+<li>Accepter les modifications.</li>
+<li>Enregistrer le schéma '<strong>wrs-on-symbols.xrs</strong>'.</li>
+</ol>
+<p><img alt="" src="../media/12345_.png" />
+<img alt="" src="../media/_6789.png" /></p>
+<p><strong>Exemple 3</strong> : Utilisation d'une image au format png pour créer le visuel d'une electrovanne qui sera nommée '<strong>electrovanne #2</strong>'</p>
+<p>On peut trouver que les possibilités de dessin de WinSymbole ne sont pas suffisantes pour créer le visuel des symboles. Il est alors possible d'utiliser une texture qui sera éditée dans un logiciel à part.
+Le visuel de l'objet 'electrovanne' initial manipulé précédemment est construit avec cette texture :</p>
+<p><img alt="" src="../media/damier.png" /></p>
+<ol>
+<li>Placer le symbole '<strong>electrovanne</strong>' de la famille '<strong>_Bobines'</strong> sur le folio.</li>
+<li>Sauver le symbole dans la bibliothèque ''<strong>_Bobines</strong> en le nommant '<strong>electrovanne #2</strong>'.</li>
+<li>Accéder à la texture 'electrovanne.png' présente dans le dossier :\
+   <strong>C:\Users\Public\Documents\Elec-CAO\wrs-data\sym_textures\_Bobines\Electrovanne.png</strong></li>
+<li>Copier dans le même dossier la texture renomme en '<strong>electrovanne#2.png'</strong></li>
+<li>Editer la texture '<strong>electrovanne#2.png'</strong> dans un logiciel adéquat, (GIMP par exemple) selon les besoins, puis enregistrer. (commande 'Ecraser electrovanne#2.png' avec GIMP)</li>
+</ol>
+<p><img alt="" src="../media/12345_exemple3.png" /></p>
+<h2 id="modes-de-dessin-par-famille-de-symboles">Mode(s) de dessin par famille de symboles</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Famille</td>
+<td>Mode(s) de dessin</td>
+</tr>
+<tr>
+<td>\_API</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Bobines</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Bornes</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Boutons</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\ _Contacteurs</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Contacts_Commande</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Detecteurs</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Disjoncteurs</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Divers_Pneumatiques</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Fins_De_Course</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Grafcet</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Intruments_de_Mesure</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Interrupteurs_Sectionneurs</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Masses+Terres</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Moteurs_Alternatifs</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Moteurs_Continus</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Relais_Thermiques</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Resistances</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Sectionneurs_Porte_Fusibles</td>
+<td>WinSymbole seulement</td>
+</tr>
+<tr>
+<td>\_Signalisation</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Sources</td>
+<td>Texture ou WinSymbole</td>
+</tr>
+<tr>
+<td>\_Transformateurs</td>
+<td>WinSymbole seulement</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Un symbole qui possède le mode de dessin par défaut 'WinSymbole' peut être décliné en en autre symbole uniquement avec WinSymbole.</li>
+<li>Un symbole qui possède le mode de dessin par défaut 'Texture' peut-être décliné en un autre symbole avec une texture modifiée, ou avec une description WinSymbole.</li>
+</ul>
+<h2 id="parametrage-des-composants-generaux">Paramétrage des composants généraux</h2>
+<p>(disponible dans 'Modifier un objet' dans WinRelais)</p>
+<table>
+<thead>
+<tr>
+<th>Relais, relais temporisé, cadenceur</th>
+<th>bibliothèque _bobines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vn  =</td>
+<td>tension de la bobine [12 à 230 V]</td>
+</tr>
+<tr>
+<td>pn  =</td>
+<td>puissance nominale [12 à 230 V]</td>
+</tr>
+<tr>
+<td>toff  =</td>
+<td>retard à la désactivation [0 à 30 s]</td>
+</tr>
+<tr>
+<td>ton  =</td>
+<td>retard à l'activation [0 à 30 s]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Contacts temporisés</th>
+<th>bibliothèque _contacts_commande</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toff  =</td>
+<td>retard à la désactivation [0 à 30 s]</td>
+</tr>
+<tr>
+<td>ton  =</td>
+<td>retard à l'activation [0 à 30 s]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Signalisation</th>
+<th>bibliothèque _signalisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v  =</td>
+<td>tension de la bobine [12 à 230 V]</td>
+</tr>
+<tr>
+<td>couleur  =</td>
+<td>couleur du voyant [rouge, vert, bleu, orange, blanc]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Disjoncteur + DDR</th>
+<th>bibliothèque _disjoncteurs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In   =</td>
+<td>calibre [0.5 à 100 A]</td>
+</tr>
+<tr>
+<td>retard  =</td>
+<td>retard intentionnel [0 à 10000 ms]</td>
+</tr>
+<tr>
+<td>courbe  =</td>
+<td>courbe de déclenchement [B, C, D]</td>
+</tr>
+<tr>
+<td>idn  =</td>
+<td>sensibilité du différentiel [10 à 10000 mA]</td>
+</tr>
+<tr>
+<td>retard_diff  =</td>
+<td>retard intentionnel du DDR [0 à 10000 ms]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Fusible</th>
+<th>bibliothèque _sectionneurs_porte_fusibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In  =</td>
+<td>calibre fusible [0.5 à 100 A]</td>
+</tr>
+<tr>
+<td>retard  =</td>
+<td>retard intentionnel [0 à 10000 ms]</td>
+</tr>
+<tr>
+<td>type =</td>
+<td>type de cartouche [aM, gG]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Relais thermique</th>
+<th>bibliothèque _relais_thermiques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ith  =</td>
+<td>seuil thermique [0.1 à 100 A]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Moteur alternatif</th>
+<th>bibliothèque _moteurs_alternatifs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pu  =</td>
+<td>puissance utile moteur [90 W à 22 kW]</td>
+</tr>
+<tr>
+<td>nm  =</td>
+<td>vitesse nominale moteur [740 à 3000 rpm]</td>
+</tr>
+<tr>
+<td>cos =</td>
+<td>cos(phi) moteur [0.5 à 1]</td>
+</tr>
+<tr>
+<td>rendement  =</td>
+<td>rendement moteur [0.5 à 1]</td>
+</tr>
+<tr>
+<td>venroulement  =</td>
+<td>tension nominale aux bornes d'un enroulement [127 à 400 V]</td>
+</tr>
+<tr>
+<td>couplage  =</td>
+<td>couplage moteur [étoile, triangle]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Moteur continu</th>
+<th>bibliothèque _moteurs_continus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pu  =</td>
+<td>puissance utile moteur [90 W à 22 kW]</td>
+</tr>
+<tr>
+<td>nm  =</td>
+<td>vitesse nominale moteur [740 à 3000 rpm]</td>
+</tr>
+<tr>
+<td>vinduit  =</td>
+<td>tension d'induit [12 à 320 V]</td>
+</tr>
+<tr>
+<td>rendement  =</td>
+<td>rendement moteur [0.5 à 1]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Source, alimentation stabilisée, transformateur</th>
+<th>bibliothèque \ _sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pression  =</td>
+<td>pression air comprimé [0 à 10 bar]</td>
+</tr>
+<tr>
+<td>vin  =</td>
+<td>tension d'entrée [12 à 400 V]</td>
+</tr>
+<tr>
+<td>vout =</td>
+<td>tension de sortie [12 à 400 V]</td>
+</tr>
+<tr>
+<td>vout1 =</td>
+<td>tension de sortie [12 à 400 V]</td>
+</tr>
+<tr>
+<td>vout2 =</td>
+<td>tension de sortie [12 à 400 V]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Résistance de puissance</th>
+<th>bibliothèque _resistances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pn  =</td>
+<td>puissance nominale [10 W à 22 kW]</td>
+</tr>
+<tr>
+<td>venroulement  =</td>
+<td>tension nominale aux bornes d'un enroulement [230 ou 400 V]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Potentiomètre</th>
+<th>bibliothèque _resistances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>valeur  =</td>
+<td>résistance du potentiomètre [1m à 10M ohms], (10m, 10, 10k, 2.2 M)</td>
+</tr>
+<tr>
+<td>alpha  =</td>
+<td>position du curseur [0 à 100 %]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Résistance simple</th>
+<th>bibliothèque _resistances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>valeur  =</td>
+<td>résistance [1m à 10M ohms], (10m, 10, 10k, 2.2 M)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Instruments de mesure</th>
+<th>bibliothèque _instruments_de_mesure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type  =</td>
+<td>type de mesure [moyenne, efficace] ou [avg, rms]</td>
+</tr>
+<tr>
+<td>afficher ici </td>
+<td>permet de positionner  la valeur de la  mesure sur le folio</td>
+</tr>
+<tr>
+<td>* </td>
+<td>idem que <strong>afficher ici</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="signaletique-des-composants-electriques">Signalétique des composants électriques:</h2>
+<p>Symboles utilisés dans la simulation pour donner l'état des composants électriques :</p>
+<p><img alt="" src="../media/image31.png" /> Protection électrique armée (disjoncteur
+et fusible)</p>
+<p><img alt="" src="../media/image32.png" />
+Ouverture protection électrique sur surcharge ou court-circuit
+(disjoncteur et fusible)</p>
+<p><img alt="" src="../media/image34.png" />
+Ouverture protection sur courant de fuite (DDR)</p>
+<p><img alt="" src="../media/image33.png" />
+<img alt="" src="../media/image36.png" /></p>
+<p>Indicateur de l'état individuel de cartouches fusibles. Exemple sur un porte-fusible tripolaire avec deux cartouches fusibles fondues.</p>
+<p><img alt="" src="../media/image35.png" />Récepteur sous-alimenté   <img alt="" src="../media/image37.png" />
+Récepteur suralimenté</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

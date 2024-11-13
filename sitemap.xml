@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
+    </url>
+    <url>
+        <loc>Noneerrors/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneerrors/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/errors/"/>
+    </url>
+    <url>
+        <loc>Nonegrapher/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegrapher/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/grapher/"/>
+    </url>
+    <url>
+        <loc>Nonehmi/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehmi/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/hmi/"/>
+    </url>
+    <url>
+        <loc>Nonelibrary/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelibrary/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/library/"/>
+    </url>
+    <url>
+        <loc>Nonemodbus/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonemodbus/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/modbus/"/>
+    </url>
+    <url>
+        <loc>Noneplc/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneplc/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/plc/"/>
+    </url>
+    <url>
+        <loc>Nonesimulator/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonesimulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/simulator/"/>
+    </url>
+    <url>
+        <loc>Nonespeed_controller/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonespeed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/speed_controller/"/>
+    </url>
+    <url>
+        <loc>Nonesynoptic/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonesynoptic/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/synoptic/"/>
+    </url>
+    <url>
+        <loc>Nonefr/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Nonefr/errors/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneerrors/"/>
+    </url>
+    <url>
+        <loc>Nonefr/grapher/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegrapher/"/>
+    </url>
+    <url>
+        <loc>Nonefr/hmi/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehmi/"/>
+    </url>
+    <url>
+        <loc>Nonefr/library/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/library/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelibrary/"/>
+    </url>
+    <url>
+        <loc>Nonefr/modbus/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonemodbus/"/>
+    </url>
+    <url>
+        <loc>Nonefr/plc/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/plc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneplc/"/>
+    </url>
+    <url>
+        <loc>Nonefr/simulator/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonesimulator/"/>
+    </url>
+    <url>
+        <loc>Nonefr/speed_controller/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonespeed_controller/"/>
+    </url>
+    <url>
+        <loc>Nonefr/synoptic/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonesynoptic/"/>
+    </url>
+</urlset>
