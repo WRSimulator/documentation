@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Liste avertissements - WRSimulateur</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../">WRSimulateur</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../" class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../simulator/" class="nav-link">Simulateur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../library/" class="nav-link">Bibliothèque simulable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../synoptic/" class="nav-link">Synoptique</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../modbus/" class="nav-link">Modbus TCP-IP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../plc/" class="nav-link">Automate programmable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../hmi/" class="nav-link">Interface Homme machine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../speed_controller/" class="nav-link">Variateur de vitesse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../grapher/" class="nav-link">Grapheur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Liste avertissements</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../grapher/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#liste-avertissements" class="nav-link">Liste Avertissements</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#avertissements-bloquants" class="nav-link">Avertissements bloquants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#avertissements-non-bloquants" class="nav-link">Avertissements non bloquants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="liste-avertissements">Liste Avertissements</h1>
+<p>Au lancement du simulateur, des vérifications sont faites sur le schéma à simuler.</p>
+<ul>
+<li><strong>Avertissement bloquant</strong> : le simulateur arrête la vérification à la première erreur rencontrée et empêche la simulation tant que l'erreur n'est pas résolue.</li>
+<li><strong>Avertissements non bloquants</strong> : le simulateur remplace la valeur des paramètre non trouvés ou illisibles par des valeurs par défaut et autorise quand même la simulation. </li>
+</ul>
+<h2 id="avertissements-bloquants">Avertissements bloquants</h2>
+<table>
+<thead>
+<tr>
+<th>BLOQUANTS</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{nb_doublons} objets  nommés {name} sont présents dans le schéma, un seul est autorisé</td>
+<td></td>
+</tr>
+<tr>
+<td>il manque le composant {master} pour contrôler le {slave}</td>
+<td></td>
+</tr>
+<tr>
+<td>l'objet {slave} est incompatible avec l'objet {master}</td>
+<td></td>
+</tr>
+<tr>
+<td>L'objet {name} qui contrôle la direction n'est pas un moteur</td>
+<td></td>
+</tr>
+<tr>
+<td>L'objet {name} qui pilote la direction n'existe pas</td>
+<td></td>
+</tr>
+<tr>
+<td>adresse API erronnée : Format attendu : %{I,Q}m.c  avec m[0,5] et c[0,31], exemple : %I1.12</td>
+<td></td>
+</tr>
+<tr>
+<td>adresse API erronnée : Format attendu : %{IW, QW}m.c  avec m[0,5] et c[0,3], exemple : %IW1.1</td>
+<td></td>
+</tr>
+<tr>
+<td>Le parent de l'objet API n'existe pas</td>
+<td></td>
+</tr>
+<tr>
+<td>repère d'E/S illisible : il doit commencer par %</td>
+<td></td>
+</tr>
+<tr>
+<td>Le parent {name} n'existe pas</td>
+<td></td>
+</tr>
+<tr>
+<td>la broche {broche} de l'objet {name} n'est pas raccordée</td>
+<td></td>
+</tr>
+<tr>
+<td>'dropped_object' {name} n'existe pas</td>
+<td></td>
+</tr>
+<tr>
+<td>'dropped_object' {name} n'est pas un objet de la famille '_physique'</td>
+<td></td>
+</tr>
+<tr>
+<td>L'objet {label_pression} n'est pas un label_pression</td>
+<td></td>
+</tr>
+<tr>
+<td>L'objet {label_pression}  n'existe pas</td>
+<td></td>
+</tr>
+<tr>
+<td>la clef 'controle1' de {name'} est non définie</td>
+<td></td>
+</tr>
+<tr>
+<td>la clef 'controle2' de {name'} est non définie</td>
+<td></td>
+</tr>
+<tr>
+<td>objet de contrôle {ctrl} manquant pour {slave}</td>
+<td></td>
+</tr>
+<tr>
+<td>les deux objets nommés {name} doivent être du type SET et RESET</td>
+<td></td>
+</tr>
+<tr>
+<td>le nombre d'objets {name} doit être strictement ègal à 2 (SET et RESET)</td>
+<td></td>
+</tr>
+<tr>
+<td>deux objets nommés  {name} ont des familles incompatibles : {slave} et {master}</td>
+<td></td>
+</tr>
+<tr>
+<td>l'objet IHM {name} est incompatible avec l'objet {name}</td>
+<td></td>
+</tr>
+<tr>
+<td>l'identificateur de collision du capteur {name} ne trouve pas de correspondance</td>
+<td></td>
+</tr>
+<tr>
+<td>liaison fausse trouvée : folio arrivée/départ non valide</td>
+<td></td>
+</tr>
+<tr>
+<td>renvoi {renvoi} dans le folio {folio} non connecté</td>
+<td></td>
+</tr>
+<tr>
+<td>l'objet {name} {folio} n'est pas simulable</td>
+<td></td>
+</tr>
+<tr>
+<td>Le schéma à simuler est trop grand</td>
+<td></td>
+</tr>
+<tr>
+<td>problème grave pour le composant : bug logiciel. Merci de contacter le support</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="avertissements-non-bloquants">Avertissements non bloquants</h2>
+<table>
+<thead>
+<tr>
+<th>{HORS_INTERVALLE}</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>'alpha' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= alpha &lt;= 100), valeur réglée à 50%"</td>
+</tr>
+<tr>
+<td>'accrochage' {HORS_INTERVALLE}</td>
+<td>[vrai,faux], valeur réglée à faux</td>
+</tr>
+<tr>
+<td>'etat_init' {HORS_INTERVALLE}</td>
+<td>[vrai,faux], valeur réglée à faux</td>
+</tr>
+<tr>
+<td>'delai' {HORS_INTERVALLE}</td>
+<td>(0.1 &lt;= delai &lt;= 30), valeur réglée à 1s</td>
+</tr>
+<tr>
+<td>masse' {HORS_INTERVALLE}</td>
+<td>(0.1 &lt;= masse &lt;= 100 kg)</td>
+</tr>
+<tr>
+<td>'friction' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= friction &lt;= 100)</td>
+</tr>
+<tr>
+<td>'port' {HORS_INTERVALLE}</td>
+<td>(500 &lt;= port &lt;= 1000), valeur réglée à 502</td>
+</tr>
+<tr>
+<td>'adresse_table_echange'</td>
+<td>(0 &lt;= adress &lt;= 1990), valeur réglée 400</td>
+</tr>
+<tr>
+<td>'ID_unite' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= ID_unite &lt;= 247), valeur réglée 111</td>
+</tr>
+<tr>
+<td>'gravity' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= gravity &lt;= 10), valeur réglée 0</td>
+</tr>
+<tr>
+<td>'amortisement' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= damping &lt;= 10), valeur réglée à 0</td>
+</tr>
+<tr>
+<td>'damping' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= damping &lt;= 10), {VALUE_SET_TO} 0</td>
+</tr>
+<tr>
+<td>'valeur' {HORS_INTERVALLE}</td>
+<td>(1pF &lt;= valeur &lt;= 10000uF), valeur réglée à 100uF</td>
+</tr>
+<tr>
+<td>'valeur' {HORS_INTERVALLE}</td>
+<td>(1e-3 &lt;= valeur &lt;= 10e6), valeur réglée à 100 ohms</td>
+</tr>
+<tr>
+<td>'valeur' {HORS_INTERVALLE}</td>
+<td>(1e-3 &lt;= valeur &lt;= 10e6), valeur réglée à 100 ohms</td>
+</tr>
+<tr>
+<td>'alpha' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= alpha &lt;= 100), valeur réglée à 50%</td>
+</tr>
+<tr>
+<td>'pn' {HORS_INTERVALLE}</td>
+<td>(10 W &lt;= Pn &lt;= 22 kW), valeur réglée à {values['pn']/1000} kW</td>
+</tr>
+<tr>
+<td>'vn' {HORS_INTERVALLE}</td>
+<td>(12 &lt;= vn &lt;= 400 V), valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'vfrein' {HORS_INTERVALLE}</td>
+<td>(12 &lt;= v &lt;= 400), valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'nm' {HORS_INTERVALLE}</td>
+<td>(700 &lt;= nm &lt;= 3000), valeur réglée à {values['nm']} rpm</td>
+</tr>
+<tr>
+<td>'nm1' {HORS_INTERVALLE}</td>
+<td>(700 &lt;= nm1 &lt;= 3000), valeur réglée à {values['nm1']} rpm</td>
+</tr>
+<tr>
+<td>'nm2' {HORS_INTERVALLE}</td>
+<td>(700 &lt;= nm2 &lt;= 3000), valeur réglée à {values['nm2']} rpm</td>
+</tr>
+<tr>
+<td>'cos' {HORS_INTERVALLE}</td>
+<td>(0.5 &lt;= cos(phi) &lt;= 1), valeur réglée à {values['cos']}</td>
+</tr>
+<tr>
+<td>'rendement' {HORS_INTERVALLE}</td>
+<td>(0.35 &lt;= rendement &lt;= 1), valeur réglée à {values['rendement']}</td>
+</tr>
+<tr>
+<td>'venroulement' {HORS_INTERVALLE}</td>
+<td>(24V &lt;= venroulement &lt;= 400V), valeur réglée à 230 V</td>
+</tr>
+<tr>
+<td>'venroulement1' {HORS_INTERVALLE}</td>
+<td>(24V &lt;= vcoil1 &lt;= 400V), valeur réglée à 230 V</td>
+</tr>
+<tr>
+<td>'venroulement2' {HORS_INTERVALLE}</td>
+<td>(24V &lt;= venroulement2 &lt;= 400V), valeur réglée  à 230 V</td>
+</tr>
+<tr>
+<td>'vinduit' {HORS_INTERVALLE}</td>
+<td>(12V &lt;= vinduit &lt;= 320V), valeur réglée à 100 V</td>
+</tr>
+<tr>
+<td>'couplage' {HORS_INTERVALLE}</td>
+<td>(étoile ou triangle), couplage choisi : étoile</td>
+</tr>
+<tr>
+<td>'couplage1' {HORS_INTERVALLE}</td>
+<td>(étoile ou triangle), couplage choisi : étoile</td>
+</tr>
+<tr>
+<td>'couplage2' {HORS_INTERVALLE}</td>
+<td>(étoile ou triangle), couplage choisi : étoile</td>
+</tr>
+<tr>
+<td>'Idn' {HORS_INTERVALLE}</td>
+<td>(10 mA &lt;= Idn &lt;= 10000 mA), valeur réglée à 100 mA</td>
+</tr>
+<tr>
+<td>'retard_diff'  {HORS_INTERVALLE}</td>
+<td>(0 ms&lt;= retard_diff &lt;= 10000 ms), valeur réglée à 0 ms</td>
+</tr>
+<tr>
+<td>'retard_rth' {HORS_INTERVALLE}</td>
+<td>(1s&lt;= retard_rth &lt;= 30s ), valeur réglée à 10 s</td>
+</tr>
+<tr>
+<td>'retard' {HORS_INTERVALLE}</td>
+<td>(0 ms&lt;= retard &lt;= 10000 ms), valeur réglée à 0 ms</td>
+</tr>
+<tr>
+<td>'Ith' {HORS_INTERVALLE}</td>
+<td>(0.1 A&lt;= Ith &lt;= 100 A), valeur réglée à 10 A</td>
+</tr>
+<tr>
+<td>'In' {HORS_INTERVALLE}</td>
+<td>(0.5 A&lt;= In &lt;= 100 A), valeur réglée à 10 A</td>
+</tr>
+<tr>
+<td>'courbe' {HORS_INTERVALLE}</td>
+<td>(B, C ou D), valeur réglée à C</td>
+</tr>
+<tr>
+<td>'typeF' {HORS_INTERVALLE}</td>
+<td>(gG ou aM), type choisi : aM</td>
+</tr>
+<tr>
+<td>'Pn' {HORS_INTERVALLE}</td>
+<td>(0.5 VA &lt;= Pn &lt;= 200 VA), valeur réglée à {values['pn']} W</td>
+</tr>
+<tr>
+<td>'vn'  {HORS_INTERVALLE}</td>
+<td>(12 &lt;= vn &lt;= 400), valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'Pn' {HORS_INTERVALLE}</td>
+<td>(0.5 W &lt;= Pn &lt;= 2 kW), valeur réglée à {values['pn']} W</td>
+</tr>
+<tr>
+<td>'couleur' {HORS_INTERVALLE}</td>
+<td>(rouge, vert, bleu, orange, blanc), valeur réglée à 'rouge'</td>
+</tr>
+<tr>
+<td>'ton' {HORS_INTERVALLE}</td>
+<td>(0.5s &lt;= ton &lt;= 30s), valeur réglée à 1s</td>
+</tr>
+<tr>
+<td>'toff' {HORS_INTERVALLE}</td>
+<td>(0.5s &lt;= toff &lt;= 30s), valeur réglée à 1s</td>
+</tr>
+<tr>
+<td>'output_range' {HORS_INTERVALLE}</td>
+<td>valeur min = (0, 4) et valeur maxi = 20, valeur réglée à (4,20) mA</td>
+</tr>
+<tr>
+<td>'output_range' {HORS_INTERVALLE}</td>
+<td>valeur min = -30 et valeur maxi = 30, valeur réglée à (0,10) V</td>
+</tr>
+<tr>
+<td>'output_scale' {HORS_INTERVALLE}</td>
+<td>valeur min = -32768 et valeur maxi = 32767, valeur réglée à (0,1000)</td>
+</tr>
+<tr>
+<td>'input_scale' {HORS_INTERVALLE}</td>
+<td>valeur min = -32768 et valeur maxi = 32767, valeur réglée à (0,1000)</td>
+</tr>
+<tr>
+<td>'voltage_range' {HORS_INTERVALLE}</td>
+<td>valeur min = -1000 et valeur maxi = 1000, valeur réglée à (0,10) V</td>
+</tr>
+<tr>
+<td>'current_range' {HORS_INTERVALLE}</td>
+<td>(min,max) = (-1, 1) A, valeur réglée à (4,20) mA</td>
+</tr>
+<tr>
+<td>'pression' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= pression &lt;= 10.0 bar), valeur réglée à 6 bar</td>
+</tr>
+<tr>
+<td>'ve' {HORS_INTERVALLE}</td>
+<td>(5 &lt;= ve  &lt;= 400), valeur réglée à {values['vin']} V</td>
+</tr>
+<tr>
+<td>'vs' {HORS_INTERVALLE}</td>
+<td>(5 &lt;= vs &lt;= 400), valeur réglée à {values['vout']} V</td>
+</tr>
+<tr>
+<td>'vs1' {HORS_INTERVALLE}</td>
+<td>(5 &lt;= vs1 &lt;= 400), valeur réglée à {values['vout1']} V</td>
+</tr>
+<tr>
+<td>'vs2' {HORS_INTERVALLE}</td>
+<td>(5 &lt;= vs2 &lt;= 400), valeur réglée à {values['vout2']} V</td>
+</tr>
+<tr>
+<td>'vbat' {HORS_INTERVALLE}</td>
+<td>(0 &lt;= vbat &lt;= 400), valeur réglée à {values['vbat']} V</td>
+</tr>
+<tr>
+<td>{power} {HORS_INTERVALLE}</td>
+<td>(90 W &lt;= {power} &lt;= 22 kW), valeur réglée à {values[{power}]/1000} kW</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>ILLISIBLE</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>'masse' {ILLISIBLE}</td>
+<td>valeur réglée à  1 kg</td>
+</tr>
+<tr>
+<td>'friction' {ILLISIBLE}</td>
+<td>valeur réglée à  1</td>
+</tr>
+<tr>
+<td>'adresse_ip' {ILLISIBLE}</td>
+<td>valeur réglée à 127.0.0.1</td>
+</tr>
+<tr>
+<td>'port' {ILLISIBLE}</td>
+<td>valeur réglée à 502</td>
+</tr>
+<tr>
+<td>'adresse_table_echange' {ILLISIBLE}</td>
+<td>valeur réglée à 400</td>
+</tr>
+<tr>
+<td>'ID_unite' {ILLISIBLE}</td>
+<td>valeur réglée à 111</td>
+</tr>
+<tr>
+<td>'gravity' {ILLISIBLE}</td>
+<td>valeur réglée à  0</td>
+</tr>
+<tr>
+<td>'amortisement' {ILLISIBLE}</td>
+<td>valeur réglée à  0</td>
+</tr>
+<tr>
+<td>'damping' {ILLISIBLE}</td>
+<td>{VALUE_SET_TO}  0</td>
+</tr>
+<tr>
+<td>'valeur' {ILLISIBLE}</td>
+<td>valeur réglée à 100 uF</td>
+</tr>
+<tr>
+<td>'valeur' {ILLISIBLE}</td>
+<td>valeur réglée à 100 ohms</td>
+</tr>
+<tr>
+<td>'valeur' {ILLISIBLE}</td>
+<td>valeur réglée à 100 ohms</td>
+</tr>
+<tr>
+<td>'alpha' {ILLISIBLE}</td>
+<td>valeur réglée à 50%</td>
+</tr>
+<tr>
+<td>'Pn' {ILLISIBLE}</td>
+<td>valeur réglée à {values['pn']/1000} kW</td>
+</tr>
+<tr>
+<td>'vn' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'v' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'nm' {ILLISIBLE}</td>
+<td>valeur réglée à {values['nm']} rpm</td>
+</tr>
+<tr>
+<td>'nm1' {ILLISIBLE}</td>
+<td>valeur réglée à {values['nm1']} rpm</td>
+</tr>
+<tr>
+<td>'nm2' {ILLISIBLE}</td>
+<td>valeur réglée à {values['nm2']} rpm</td>
+</tr>
+<tr>
+<td>'cos' {ILLISIBLE}</td>
+<td>valeur réglée à {values['cos']}</td>
+</tr>
+<tr>
+<td>'rendement' {ILLISIBLE}</td>
+<td>valeur réglée à {values['rendement']}</td>
+</tr>
+<tr>
+<td>'venroulement'  {ILLISIBLE}</td>
+<td>valeur réglée à {values['venroulement']/0.98:2.0f} V</td>
+</tr>
+<tr>
+<td>'venroulement1' {ILLISIBLE}</td>
+<td>valeur réglée à {values['venroulement1']/0.98:2.0f} V</td>
+</tr>
+<tr>
+<td>'venroulement2'  {ILLISIBLE}</td>
+<td>valeur réglée à {values['venroulement2']/0.98:2.0f} V</td>
+</tr>
+<tr>
+<td>'vinduit' {ILLISIBLE}</td>
+<td>valeur réglée à {values['va']/0.98:2.0f} V</td>
+</tr>
+<tr>
+<td>'Idn' {ILLISIBLE}</td>
+<td>valeur réglée à {values['idn']} mA</td>
+</tr>
+<tr>
+<td>'retard_diff' {ILLISIBLE}</td>
+<td>{VALUE_SET_TO} {values['retard_diff']} ms</td>
+</tr>
+<tr>
+<td>'retard_rth' {ILLISIBLE}</td>
+<td>valeur réglée à {values['retard_rth']} s</td>
+</tr>
+<tr>
+<td>'retard' {ILLISIBLE}</td>
+<td>valeur réglée à {values['retard']} ms</td>
+</tr>
+<tr>
+<td>'Ith' {ILLISIBLE}</td>
+<td>{VALUE_SET_TO} {values['ith']} A</td>
+</tr>
+<tr>
+<td>'In' {ILLISIBLE}</td>
+<td>valeur réglée à {values['in']} A</td>
+</tr>
+<tr>
+<td>'Pn' {ILLISIBLE}</td>
+<td>valeur réglée à {values['pn']} W</td>
+</tr>
+<tr>
+<td>'vn' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'couleur' {ILLISIBLE}</td>
+<td>valeur réglée à 'rouge'</td>
+</tr>
+<tr>
+<td>'vn' {ILLISIBLE}</td>
+<td>valeur réglée à 24 V</td>
+</tr>
+<tr>
+<td>'ton' {ILLISIBLE}</td>
+<td>valeur réglée à 1s</td>
+</tr>
+<tr>
+<td>'toff' {ILLISIBLE}</td>
+<td>valeur réglée à 1s</td>
+</tr>
+<tr>
+<td>'output_type' {ILLISIBLE}</td>
+<td>(output_type = V ou I), 'output_type' réglé sur 'V'</td>
+</tr>
+<tr>
+<td>'output_type' {ILLISIBLE}</td>
+<td>(output_type = V ou I), 'output_type' réglé sur 'V'</td>
+</tr>
+<tr>
+<td>'output_range' {ILLISIBLE}</td>
+<td>valeur réglée à (4,20) mA</td>
+</tr>
+<tr>
+<td>'output_range' {ILLISIBLE}</td>
+<td>valeur réglée à (0,10) V</td>
+</tr>
+<tr>
+<td>'output_scale' {ILLISIBLE}</td>
+<td>valeur réglée à (0,1000)</td>
+</tr>
+<tr>
+<td>'input_type' {ILLISIBLE}</td>
+<td>(input_type = V ou I), 'input_type' réglé sur 'V'</td>
+</tr>
+<tr>
+<td>'input_type' {ILLISIBLE}</td>
+<td>(input_type = V ou I), 'input_type' réglé sur 'V'</td>
+</tr>
+<tr>
+<td>'input_range' {ILLISIBLE}</td>
+<td>valeur réglée à (4,20) mA</td>
+</tr>
+<tr>
+<td>'input_range' {ILLISIBLE}</td>
+<td>valeur réglée à (0,10) V</td>
+</tr>
+<tr>
+<td>'input_scale' {ILLISIBLE}</td>
+<td>valeur réglée à (0,1000)</td>
+</tr>
+<tr>
+<td>'v' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vn']} V</td>
+</tr>
+<tr>
+<td>'voltage_range' {ILLISIBLE}</td>
+<td>valeur réglée à (0,10) V</td>
+</tr>
+<tr>
+<td>'current_range' {ILLISIBLE}</td>
+<td>valeur réglée à (4,20) mA</td>
+</tr>
+<tr>
+<td>'pression' {ILLISIBLE}</td>
+<td>valeur réglée à {values['pression']} bar</td>
+</tr>
+<tr>
+<td>'ve' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vin']} V</td>
+</tr>
+<tr>
+<td>'vs' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vout']} V</td>
+</tr>
+<tr>
+<td>'vs1' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vout1']} V</td>
+</tr>
+<tr>
+<td>'vs2' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vout2']} V</td>
+</tr>
+<tr>
+<td>'vbat' {ILLISIBLE}</td>
+<td>valeur réglée à {values['vbat']} V</td>
+</tr>
+<tr>
+<td>'format' {ILLISIBLE}</td>
+<td>(format = ac ou dc), 'format' réglé sur 'dc'</td>
+</tr>
+<tr>
+<td>{power} {ILLISIBLE}</td>
+<td>valeur réglée à {values[{power}]/1000} kW</td>
+</tr>
+<tr>
+<td>paramètre {k} {ILLISIBLE}</td>
+<td>valeur d'usine {values[k]} {limits[k][0]} choisie</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+site_name: wrs
+
+#theme:   readthedocs # bootstrap4,  windmill
+theme:
+ name: mkdocs
+ features:
+   - search.highlight
+nav:
+  - Home: index.md
+  - Simulator: simulator.md
+  - Simulable library: library.md
+  - Synoptic: synoptic.md
+  - Modbus TCP-IP: modbus.md
+  - Programmable Logic Controller: plc.md
+  - Human Machine Interface: hmi.md
+  - Speed Controller: speed_controller.md
+  - Grapher: grapher.md
+  - Warning list: errors.md
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      #reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
+          site_name: "WRSimulator"
+        - locale: fr
+          name: Français
+          build: true
+          site_name: "WRSimulateur"
+          nav_translations:
+            Home: Accueil
+            Simulator: Simulateur
+            Simulable library: Bibliothèque simulable
+            Synoptic: Synoptique
+            Modbus TCP-IP: Modbus TCP-IP
+            Programmable Logic Controller: Automate programmable
+            Human Machine Interface: Interface Homme machine
+            Speed Controller: Variateur de vitesse
+            Grapher: Grapheur
+            Warning list: Liste avertissements
+
