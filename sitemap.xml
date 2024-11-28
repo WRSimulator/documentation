@@ -2,142 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/errors/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/errors/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/errors/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/errors/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/grapher/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/grapher/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/grapher/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/hmi/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/hmi/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/hmi/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/library/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/library/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/library/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/library/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/library/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/modbus/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/modbus/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/modbus/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/plc/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/plc/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/plc/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/plc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/plc/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/simulator/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/simulator/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/simulator/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/speed_controller/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/speed_controller/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/speed_controller/"/>
     </url>
     <url>
         <loc>https://fredarkin.github.io/wrs_doc/synoptic/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/synoptic/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/synoptic/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/errors/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/errors/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/errors/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/errors/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/errors/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/grapher/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/grapher/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/grapher/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/grapher/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/hmi/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/hmi/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/hmi/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/hmi/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/library/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/library/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/library/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/library/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/library/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/library/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/modbus/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/modbus/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/modbus/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/modbus/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/plc/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/plc/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/plc/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/plc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/plc/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/plc/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/simulator/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/simulator/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/simulator/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/simulator/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/speed_controller/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/speed_controller/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/speed_controller/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/speed_controller/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/synoptic/</loc>
-        <lastmod>2024-11-17</lastmod>
+        <loc>https://fredarkin.github.io/wrs_doc/en/synoptic/</loc>
+        <lastmod>2024-11-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/synoptic/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/en/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/synoptic/"/>
     </url>
 </urlset>
