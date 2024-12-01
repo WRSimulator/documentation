@@ -1,0 +1,1277 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fredarkin.github.io/wrs_doc/fr/synoptic/">
+      
+      
+        <link rel="prev" href="../library/">
+      
+      
+        <link rel="next" href="../modbus/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Synoptique - WRSimulateur</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#synoptique" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../" title="WRSimulateur" class="md-header__button md-logo" aria-label="WRSimulateur" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WRSimulateur
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Synoptique
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../synoptic/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fredarkin/wrs_doc" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="WRSimulateur" class="md-nav__button md-logo" aria-label="WRSimulateur" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    WRSimulateur
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fredarkin/wrs_doc" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulateur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliothèque simulable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Synoptique
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Synoptique
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preambule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préambule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametrage-objet-physique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramétrage objet physique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametrage-objet-kinematique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramétrage objet kinématique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecteur-et-fin-de-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Détecteur et Fin de course
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liaison-glissiere-slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liaison glissière (slider)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actionneur-verin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actionneur vérin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actionneur-verin-flottant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actionneur vérin flottant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liaison-glissiere-et-parente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liaison glissière et parenté
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convoyeur-en-vue-de-dessus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convoyeur en vue de dessus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convoyeur-en-vue-de-cote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convoyeur en vue de côté
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objet-dispenser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objet dispenser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sous-ensembles-synoptiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sous-ensembles synoptiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modbus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modbus TCP-IP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate programmable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hmi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface Homme machine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speed_controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variateur de vitesse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grapher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grapheur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liste avertissements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preambule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préambule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametrage-objet-physique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramétrage objet physique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametrage-objet-kinematique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramétrage objet kinématique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecteur-et-fin-de-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Détecteur et Fin de course
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liaison-glissiere-slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liaison glissière (slider)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actionneur-verin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actionneur vérin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actionneur-verin-flottant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actionneur vérin flottant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liaison-glissiere-et-parente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liaison glissière et parenté
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convoyeur-en-vue-de-dessus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convoyeur en vue de dessus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convoyeur-en-vue-de-cote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convoyeur en vue de côté
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objet-dispenser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objet dispenser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sous-ensembles-synoptiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sous-ensembles synoptiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="synoptique">Synoptique</h1>
+<h2 id="preambule">Préambule</h2>
+<p>Le simulateur permet de créer des petites parties opératives contrôlables avec les actionneurs
+du schéma. Il intègre un moteur physique 2D pour apporter un certain réalisme à la simulation. Exemple :
+<img alt="" src="../media/synoptic1.png" />
+Cet exemple montre deux bidons cylindriques vus de côté posés sur une rampe inclinée. Lorsque la tige du vérin sort, les deux bidons sont remontés vers le haut de la rampe.
+Lorsque la tige du vérin rentre, les deux bidons roulent (ou glissent selon le coefficient de frottement appliqué) vers le bas de la rampe en restant finalement bloqués en position par le nez du vérin.</p>
+<p>Deux types d'objets sont utilisés par le moteur physique :</p>
+<ul>
+<li>
+<p>les objets physiques qui sont soumis aux forces extérieures et à la gravité. Ils ont notamment une masse en kilogrammes</p>
+</li>
+<li>
+<p>les objets kinématiques ont leurs positions dans la scène contrôlés directement par le programme. Ils sont insensibles aux forces extérieures et donc non soumis aux lois de la physique. Les objets physiques peuvent entrer en collision avec les objets kinématiques.</p>
+</li>
+</ul>
+<h2 id="parametrage-objet-physique">Paramétrage objet physique</h2>
+<p><img alt="" src="../media/image43.png" /><img alt="" src="../media/image42.png" /></p>
+<table>
+<thead>
+<tr>
+<th>shape</th>
+<th>bibliothèque \_Physique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dynamique  =</td>
+<td>True -&gt; l'objet est de type 'physique', False -&gt; l'objet est de type 'kinématique'</td>
+</tr>
+<tr>
+<td>masse  =</td>
+<td>masse en kg de l'objet physique [1 à 100 kg]</td>
+</tr>
+<tr>
+<td>friction  =</td>
+<td>coefficient de friction [0 à 100] appliqué à l'objet physique</td>
+</tr>
+<tr>
+<td>pas_de_rotation  =</td>
+<td>applique une masse et une valeur d'inertie considérable à l'objet physique</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut)</td>
+</tr>
+<tr>
+<td>nom_texture =</td>
+<td>nom de l'image (format <strong>png</strong> uniquement)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>si <strong>dynamique</strong> = False, les paramètres <strong>masse</strong> et <strong>friction</strong> sont ignorés.</li>
+</ul>
+<h2 id="parametrage-objet-kinematique">Paramétrage objet kinématique</h2>
+<table>
+<thead>
+<tr>
+<th>kinematic</th>
+<th>bibliothèque \_Synoptique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une liaison glissière</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut)</td>
+</tr>
+<tr>
+<td>nom_texture =</td>
+<td>nom de l'image qui peut être appliqué à l'objet (format <strong>png</strong> uniquement)</td>
+</tr>
+<tr>
+<td>show  =</td>
+<td>True (False ou True) montrer/cacher l'objet</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Un objet kinématique peut-être attaché à une liaison glissière.</li>
+<li>Le paramètre <strong>show</strong> permet l'utilisation de 'murs' invisibles. </li>
+</ul>
+<h2 id="detecteur-et-fin-de-course">Détecteur et Fin de course</h2>
+<p>Détecte des objets physiques et kinématiques qui entrent dans la zone de détection du détecteur/Fin de course</p>
+<ul>
+<li>Un détecteur (sensor) est un objet kinématique spécialisé disponible dans la bibliothèque <strong>_Synoptique</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>sensor</th>
+<th>bibliothèque \_Synoptique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une liaison glissière</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut, détecte tous les objets présents dans la zone de détection)</td>
+</tr>
+<tr>
+<td>nom_texture =</td>
+<td>nom de l'image qui peut être appliquée à l'objet (format <strong>png</strong> uniquement)</td>
+</tr>
+<tr>
+<td>* =</td>
+<td>fixe la position du voyant indicateur (carré vert)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Un détecteur avec id_collision = * détecte tous les objets qui entrent dans sa zone de détection.</li>
+<li><strong>id_collision</strong> permet de filtrer les objets détectés par un composant détecteur ou fin de course. Par exemple :
+  <img alt="" src="../media/image44.png" /></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Filtrage des objets en collision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>le sensor A détecte  uniquement l'objet P2</td>
+</tr>
+<tr>
+<td>le sensor * détecte  les objets P1, P2 et P3</td>
+</tr>
+<tr>
+<td>sensor B détecte uniquement l'objet P3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>La zone de détection d'un détecteur est définie par un contour de couleur <strong>magenta (255,0,255)</strong>
+  (255,0,255) . Par exemple :
+  <img alt="" src="../media/detect_zone.png" /> </p>
+</li>
+<li>
+<p>Si un nom de texture est défini, l'application recherche la texture (au format <strong>png</strong> seulement) dans le dossier
+  <strong>C:\Users\Public\Documents\Elec-CAO\wrs-data\textures</strong></p>
+</li>
+<li>Si le nom de la texture n'est pas défini ou si le fichier texture n'est pas trouvé, une texture calculée par le programme sera plaquée sur l'objet en utilisant 
+le bord extérieur coloré en <strong>rouge</strong>. Par exemple :
+<img alt="" src="../media/texture_variant.png" /></li>
+</ul>
+<p>La silhouette de la texture permet de définir automatiquement la forme de collision de l'objet.
+    - Le moteur physique utilise la partie transparente de la texture pour délimiter la forme de collision sous la forme d'un polygone <strong>convexe</strong> comme montré ci-dessous :
+<img alt="" src="../media/texture_variant1.png" /></p>
+<ul>
+<li>Contrainte de dessin dans <strong>WinSymbole</strong>
+<img alt="" src="../media/barycentre.png" /></li>
+</ul>
+<h2 id="liaison-glissiere-slider">Liaison glissière (slider)</h2>
+<p>Les liaisons glissières sont disponibles dans la bibliothèque <strong>_Synoptique</strong> et sont préfixées avec le mot clef slider :
+<img alt="" src="../media/slider1.png" /></p>
+<ul>
+<li>Description des paramètres d'un slider :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>slider</th>
+<th>bibliothèque \_Synoptique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>controle_direction  =</td>
+<td>désigne l'objet moteur utilisé pour contrôler le mobile en direction</td>
+</tr>
+<tr>
+<td>controle_vitesse  =</td>
+<td>désigne l'objet moteur utilisé pour contrôler le mobile en vitesse</td>
+</tr>
+<tr>
+<td>vitesse  =</td>
+<td>vitesse en % de la vitesse du moteur (transcrite en vitesse linéaire). [0 à100%]</td>
+</tr>
+<tr>
+<td>friction  =</td>
+<td>fixe la friction de la surface du mobile [0 à 100]</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut, détecte tout objet entrant en collision)</td>
+</tr>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une autre liaison glissière</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée au mobile.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Eléments constitutifs d'une liaison glissière éditables dans WinSymbole :</p>
+<ul>
+<li>Ces éléments sont différentiés dans WinSymbole grâce à des couleurs précises :<ul>
+<li><strong>(255,128,255)</strong> identifie la ligne directrice et les limites de déplacement (symboles carré et cercle),</li>
+<li><strong>(255,0,0)</strong> identifie le contour extérieur du mobile. Ce contour doit être un polygone convexe unique,</li>
+<li><strong>(255,0,255)</strong> identifie la forme de collision optionnelle qui doit être un polygone convexe unique. Si ce polygone n'est pas défini, le moteur physique calcule la forme de collision à partir du contour extérieur rouge.
+<img alt="" src="../media/slider_primitives.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Exemples
+<img alt="" src="../media/slider_examples.png" /></p>
+</li>
+</ul>
+<h2 id="actionneur-verin">Actionneur vérin</h2>
+<p>Un vérin est une liaison glissière spécialisée.
+<img alt="" src="../media/cylinder1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>VerinSE, VerinDE</th>
+<th>bibliothèque \_Verins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pression  =</td>
+<td>pression nominale [0 à 10 bar]</td>
+</tr>
+<tr>
+<td>vitesse  =</td>
+<td>coefficient de vitesse de déplacement de la tige [0 à 100%]</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut, détecte tout objet entrant en collision)</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée à la tige</td>
+</tr>
+</tbody>
+</table>
+<h2 id="actionneur-verin-flottant">Actionneur vérin flottant</h2>
+<p>Il est identique au composant vérin, à ceci prés qu'il peut-être attaché à une liaison glissiére.
+ <img alt="" src="../media/float_cylinder1.png" /></p>
+<ul>
+<li>Il est systématiquement associé :<ul>
+<li>à un objet <strong>Label_Pression</strong> pour le vérin simple effet,</li>
+<li>à deux objets <strong>Label_Pression</strong> pour le vérin double effet</li>
+</ul>
+</li>
+<li>Les noms des objets <strong>Label_Pression</strong> sont utilisés dans le paramètre <strong>float_inputs</strong> (ou <strong>float_input</strong>) pour connecter les orifices des vérins.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>VerinDE_flottant</th>
+<th>bibliothèque \_Verins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float_inputs =</td>
+<td>(Label_Pression orifice 1, Label_Pression orifice 2)</td>
+</tr>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une autre liaison glissière</td>
+</tr>
+<tr>
+<td>pression  =</td>
+<td>pression nominale [0 à 10 bar]</td>
+</tr>
+<tr>
+<td>vitesse  =</td>
+<td>coefficient de vitesse de déplacement de la tige [0 à 100%]</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut, détecte tout objet entrant en collision)</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée à la tige</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>VerinSE_flottant</th>
+<th>bibliothèque \_Verins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float_input =</td>
+<td>Label_Pression orifice 1</td>
+</tr>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une autre liaison glissière.</td>
+</tr>
+<tr>
+<td>pression  =</td>
+<td>pression nominale [0 à 10 bar]</td>
+</tr>
+<tr>
+<td>vitesse  =</td>
+<td>coefficient de vitesse de déplacement de la tige [0 à 100%]</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut, détecte tout objet entrant en collision)</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée à la tige</td>
+</tr>
+</tbody>
+</table>
+<h2 id="liaison-glissiere-et-parente">Liaison glissière et parenté</h2>
+<p>Tous les objets kinématiques peuvent être attachés à une liaison glissière. Ceci est extrêmement pratique pour créer des formes de collision non convexes, par exemple :</p>
+<p>Le nez de la tige est un objet kinématique attaché à la tige du vérin grâce au paramètre parent :
+<img alt="" src="../media/slider_parent.png" /></p>
+<p>Il est possible d'attacher plusieurs objets kinématiques :
+<img alt="" src="../media/slider_parent1.png" /></p>
+<h2 id="convoyeur-en-vue-de-dessus">Convoyeur en vue de dessus</h2>
+<p>Les convoyeurs en vue de dessus sont disponibles dans la bibliothèque <strong>_Synoptique</strong> et sont préfixés avec le mot clef <strong>conveyor</strong> :
+<img alt="" src="../media/conveyor_top.png" /></p>
+<table>
+<thead>
+<tr>
+<th>conveyor</th>
+<th>bibliothèque \_Synoptique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>controle_direction =</td>
+<td>objet moteur utilisé pour contrôler la diection du convoyeur</td>
+</tr>
+<tr>
+<td>controle_vitesse  =</td>
+<td>objet moteur utilisé pour contrôler la vitesse</td>
+</tr>
+<tr>
+<td>vitesse  =</td>
+<td>vitesse du convoyeur en % de la vitesse du moteur (transcrite en vitesse linéaire). [0 à 100%]</td>
+</tr>
+<tr>
+<td>friction  =</td>
+<td>fixe la friction du convoyeur [0 à 100]</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut)</td>
+</tr>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une liaison glissière</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée au convoyeur</td>
+</tr>
+</tbody>
+</table>
+<h2 id="convoyeur-en-vue-de-cote">Convoyeur en vue de côté</h2>
+<p>Les convoyeurs en vue de côté sont disponibles dans la bibliothèque <strong>_Synoptique</strong> et sont préfixés avec le mot clef <strong>side_conveyor</strong> :
+<img alt="" src="../media/conveyor_side.png" /></p>
+<table>
+<thead>
+<tr>
+<th>side_conveyor</th>
+<th>bibliothèque \_Synoptique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>controle_direction =</td>
+<td>objet moteur utilisé pour contrôler la diection du convoyeur</td>
+</tr>
+<tr>
+<td>controle_vitesse  =</td>
+<td>objet moteur utilisé pour contrôler la vitesse</td>
+</tr>
+<tr>
+<td>vitesse  =</td>
+<td>vitesse du convoyeur en % de la vitesse du moteur (transcrite en vitesse linéaire). [0 à 100%]</td>
+</tr>
+<tr>
+<td>friction  =</td>
+<td>fixe la friction du convoyeur [0 à 100]</td>
+</tr>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut)</td>
+</tr>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une liaison glissière</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée au convoyeur</td>
+</tr>
+</tbody>
+</table>
+<h2 id="objet-dispenser">Objet dispenser</h2>
+<p>Voir <strong>38 - demo_Convoyeurs.xrs</strong></p>
+<p>Objet synoptique spécialisé qui permet de distribuer un objet physique dans la scène à intervalle régulier.</p>
+<ul>
+<li>Il est nécessaire de placer au moins un exemplaire de l'objet à distribuer dans la scène.</li>
+<li>Le nombre d'objets distribué est limité à 16.</li>
+</ul>
+<p><img alt="" src="../media/dispenser1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>dispenser</th>
+<th>bibliothèque \_Synoptique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id_collision  =</td>
+<td>* (valeur par défaut)</td>
+</tr>
+<tr>
+<td>parent  =</td>
+<td>désigne un parent qui ne peut-être qu'une liaison glissière</td>
+</tr>
+<tr>
+<td>nom_texture  =</td>
+<td>nom de la texture qui peut-être appliquée au dispenser</td>
+</tr>
+<tr>
+<td>dropped_object =</td>
+<td>nom de l'objet physique distribué</td>
+</tr>
+<tr>
+<td>*</td>
+<td>fixe le point de distribbution</td>
+</tr>
+<tr>
+<td>delay =</td>
+<td>intervalle de distribution en secondes [0.1 s à 30 s]</td>
+</tr>
+<tr>
+<td>show  =</td>
+<td>True (False ou True) montrer/cacher l'objet</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>si <strong>dispenser</strong> est associé à un bouton de potentiomètre, l'intervalle de distribution est ajustable ente 0.1 s et <strong>delay</strong></li>
+</ul>
+<h2 id="sous-ensembles-synoptiques">Sous-ensembles synoptiques</h2>
+<p>On peut sauver et récupérer des synoptiques complets grâce aux commandes de blocs de WinRelais.
+<img alt="" src="../media/synoptic_blocks.png" /></p>
+<p>Exemple de synoptique importé <strong>tri_de_caisses</strong>:
+<img alt="" src="../media/synoptic_blocks1.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023-2025 Frédéric Popek for INGEREA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
