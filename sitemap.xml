@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/</loc>
+        <loc>https://WRSimulator.github.io/documentation/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/errors/</loc>
+        <loc>https://WRSimulator.github.io/documentation/errors/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/errors/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/errors/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/errors/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/grapher/</loc>
+        <loc>https://WRSimulator.github.io/documentation/grapher/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/grapher/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/grapher/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/hmi/</loc>
+        <loc>https://WRSimulator.github.io/documentation/hmi/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/hmi/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/hmi/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/library/</loc>
+        <loc>https://WRSimulator.github.io/documentation/library/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/library/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/library/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/library/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/library/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/modbus/</loc>
+        <loc>https://WRSimulator.github.io/documentation/modbus/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/modbus/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/modbus/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/plc/</loc>
+        <loc>https://WRSimulator.github.io/documentation/plc/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/plc/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/plc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/plc/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/plc/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/simulator/</loc>
+        <loc>https://WRSimulator.github.io/documentation/simulator/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/simulator/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/simulator/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/speed_controller/</loc>
+        <loc>https://WRSimulator.github.io/documentation/speed_controller/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/speed_controller/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/speed_controller/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/synoptic/</loc>
+        <loc>https://WRSimulator.github.io/documentation/synoptic/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/synoptic/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/synoptic/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/errors/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/errors/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/errors/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/errors/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/errors/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/grapher/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/grapher/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/grapher/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/grapher/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/grapher/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/hmi/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/hmi/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/hmi/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/hmi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/hmi/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/library/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/library/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/library/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/library/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/library/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/library/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/modbus/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/modbus/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/modbus/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/modbus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/modbus/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/plc/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/plc/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/plc/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/plc/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/plc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/plc/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/simulator/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/simulator/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/simulator/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/simulator/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/speed_controller/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/speed_controller/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/speed_controller/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/speed_controller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/speed_controller/"/>
     </url>
     <url>
-        <loc>https://fredarkin.github.io/wrs_doc/fr/synoptic/</loc>
+        <loc>https://WRSimulator.github.io/documentation/fr/synoptic/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://fredarkin.github.io/wrs_doc/fr/synoptic/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fredarkin.github.io/wrs_doc/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/synoptic/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/synoptic/"/>
     </url>
 </urlset>
