@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
+        <loc>https://WRSimulator.github.io/documentation/</loc>
+        <lastmod>2025-01-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
+    </url>
+    <url>
         <loc>https://WRSimulator.github.io/documentation/errors/</loc>
         <lastmod>2025-01-05</lastmod>
         <changefreq>daily</changefreq>
@@ -20,13 +27,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/hmi/"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/hmi/"/>
-    </url>
-    <url>
-        <loc>https://WRSimulator.github.io/documentation/home/</loc>
-        <lastmod>2025-01-05</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/home/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/home/"/>
     </url>
     <url>
         <loc>https://WRSimulator.github.io/documentation/library/</loc>
@@ -71,6 +71,13 @@
         <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/synoptic/"/>
     </url>
     <url>
+        <loc>https://WRSimulator.github.io/documentation/fr/</loc>
+        <lastmod>2025-01-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/"/>
+    </url>
+    <url>
         <loc>https://WRSimulator.github.io/documentation/fr/errors/</loc>
         <lastmod>2025-01-05</lastmod>
         <changefreq>daily</changefreq>
@@ -90,13 +97,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/hmi/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/hmi/"/>
-    </url>
-    <url>
-        <loc>https://WRSimulator.github.io/documentation/fr/home/</loc>
-        <lastmod>2025-01-05</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/home/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/home/"/>
     </url>
     <url>
         <loc>https://WRSimulator.github.io/documentation/fr/library/</loc>
@@ -139,11 +139,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/synoptic/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/synoptic/"/>
-    </url>
-    <url>
-        <loc>https://WRSimulator.github.io/documentation/fr/</loc>
-        <lastmod>2025-01-05</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
     </url>
 </urlset>
