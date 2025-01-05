@@ -643,7 +643,10 @@
 </ul>
 <p><img alt="" src="../media/request23.png" /></p>
 <h2 id="modbus-mapping">MODBUS mapping</h2>
+<p>Mapping example with <strong>QW_adress</strong> = 400 et <strong>IW_adress</strong> = 500</p>
 <p><img alt="" src="../media/mappage_modbus.png" /></p>
+<p>Mapping example with <strong>QW_adress</strong> = 0 et <strong>IW_adress</strong> = 24  (used by <strong>CODESYS</strong>)</p>
+<p><img alt="" src="../media/mappage_modbus_codesys.png" /></p>
 <h2 id="modbus-configuration">MODBUS Configuration</h2>
 <p><img alt="" src="../media/modbus_config.png" /></p>
 <table>
@@ -657,8 +660,8 @@
 <tbody>
 <tr>
 <td>ip_adress</td>
-<td>localhost/127.0.0.1/xxx.xxx.xxx.xxx</td>
-<td>IP address of PLC server</td>
+<td>localhost/127.0.0.1/192.168.0.10</td>
+<td>PLC server IP adress</td>
 </tr>
 <tr>
 <td>port</td>
@@ -668,17 +671,24 @@
 <tr>
 <td>unit_ID</td>
 <td>111</td>
-<td>customer_id</td>
+<td>unit ID</td>
 </tr>
 <tr>
-<td>exchange_table_address</td>
+<td>QW_adress</td>
 <td>400</td>
-<td>pointer on exchange table</td>
+<td>PLC output table pointer</td>
+</tr>
+<tr>
+<td>IW_adress</td>
+<td>500</td>
+<td>PLC input table pointer</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>If the MODBUS configuration object is not set in your project, the default values used are: ip_address = local_host, port = 502, exchange_table_address = 400 and unit_ID = 111.</li>
+<li><strong>QW_adress</strong> et <strong>IW_adress</strong> are used to set the pointers for the PLC's output and input tables. The distance between these two pointers must be at least 24 words (16 bits) to avoid overlapping tables.</li>
+<li><strong>24</strong> corresponds to the number of holding registers used in Modbus requests (24 words for inputs and 24 words for outputs).</li>
+<li>If the MODBUS configuration object is not placed in your project, the default values used are: ip_address = local_host, port = 502, QW_address = 400, IW_address = 500 and unit_ID = 111.</li>
 <li>The MODBUS configuration object is only required when a PLC is present in a folio.</li>
 </ul>
 
