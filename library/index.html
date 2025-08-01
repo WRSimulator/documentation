@@ -397,9 +397,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-component-settings" class="md-nav__link">
+  <a href="#electrical-component-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      General component settings
+      Electrical component settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pneumatic-component-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pneumatic component settings
     </span>
   </a>
   
@@ -649,9 +658,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-component-settings" class="md-nav__link">
+  <a href="#electrical-component-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      General component settings
+      Electrical component settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pneumatic-component-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pneumatic component settings
     </span>
   </a>
   
@@ -796,44 +814,119 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <td>_Cylinders</td>
 <td>WinSymbol only</td>
 </tr>
+<tr>
+<td>_DC_Motors</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Detectors</td>
+<td>Texture or WinSymbol</td>
+</tr>
+<tr>
+<td>_Diodes</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Disconnect_Switches</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Fuse_Switches</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Ground+Earth</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Hmi</td>
+<td>Texture or WinSymbol</td>
+</tr>
+<tr>
+<td>_Indicators</td>
+<td>Texture or WinSymbol</td>
+</tr>
+<tr>
+<td>_Limit_Switches</td>
+<td>Texture or WinSymbol</td>
+</tr>
+<tr>
+<td>_Logic</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Machine_Safety</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Magnetic_Relays</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Measurement_Instruments</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_PLC</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Pneumatic_Components</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Resistors</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Sensors</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Sfc</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Speed_Drives</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Supplies</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Synoptic</td>
+<td>Texture or WinSymbol</td>
+</tr>
+<tr>
+<td>_Terminals</td>
+<td>Texture or WinSymbol</td>
+</tr>
+<tr>
+<td>_Thermal_Relays</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Transformers</td>
+<td>WinSymbol only</td>
+</tr>
+<tr>
+<td>_Valves</td>
+<td>WinSymbol only</td>
+</tr>
 </tbody>
 </table>
-<p>|_DC_Motors|WinSymbol only|
-|_Detectors|Texture or WinSymbol|
-|_Diodes|WinSymbol only|
-|_Disconnect_Switches|WinSymbol only|
-|_Fuse_Switches|WinSymbol only|
-|_Ground+Earth|WinSymbol only|
-|_Hmi|Texture or WinSymbol|
-|_Indicators|Texture or WinSymbol|
-|_Limit_Switches|Texture or WinSymbol|
-|_Logic|WinSymbol only|
-|_Machine_Safety|WinSymbol only|
-|_Magnetic_Relays|WinSymbol only|
-|_Measurement_Instruments|WinSymbol only|
-|_PLC|WinSymbol only|
-|_Pneumatic_Components|WinSymbol only|
-|_Resistors|WinSymbol only|
-|_Sensors|WinSymbol only|
-|_Sfc|WinSymbol only|
-|_Speed_Drives|WinSymbol only|
-|_Supplies|WinSymbol only|
-|_Synoptic|Texture or WinSymbol|
-|_Terminals|Texture or WinSymbol|
-|_Thermal_Relays|WinSymbol only|
-|_Transformers|WinSymbol only|
-|_Valves|WinSymbol only|</p>
 <ul>
 <li>A symbol with the default design mode 'WinSymbol' can be transformed into another symbol using WinSymbol only.</li>
 <li>A symbol with the default drawing mode 'Texture' can be transformed into another symbol with a modified texture, or with a WinSymbol description.</li>
 </ul>
-<h2 id="general-component-settings">General component settings</h2>
+<h2 id="electrical-component-settings">Electrical component settings</h2>
 <p>(available in 'Modify an object' in WinRelais)</p>
 <table>
 <thead>
 <tr>
 <th>Relay, Timer, Timer</th>
-<th>Library _Coils</th>
+<th>library _Coils</th>
 </tr>
 </thead>
 <tbody>
@@ -859,7 +952,7 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <thead>
 <tr>
 <th>timed contacts</th>
-<th>library _contacts_commande</th>
+<th>library _control_contacts</th>
 </tr>
 </thead>
 <tbody>
@@ -868,16 +961,38 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <td>deactivation delay [0 to 30 s]</td>
 </tr>
 <tr>
-<td>ton = Activation delay [0 to 30 s]</td>
-<td></td>
+<td>ton =</td>
+<td>activation delay [0 to 30 s]</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>Signaling</th>
-<th>library _signaling</th>
+<th>bulb</th>
+<th>library _building</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vn =</td>
+<td>bulb voltage [12 to 230 V]</td>
+</tr>
+<tr>
+<td>pn =</td>
+<td>bulb power [12 to 230 W]</td>
+</tr>
+<tr>
+<td>color =</td>
+<td>bulb color [red, green, blue, orange, white]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>indicator</th>
+<th>library _indicators</th>
 </tr>
 </thead>
 <tbody>
@@ -886,8 +1001,8 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <td>coil voltage [12 to 230 V]</td>
 </tr>
 <tr>
-<td>color = LED color [red, green, blue, orange, white]</td>
-<td></td>
+<td>color =</td>
+<td>light color [red, green, blue, orange, white]</td>
 </tr>
 </tbody>
 </table>
@@ -924,8 +1039,8 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <table>
 <thead>
 <tr>
-<th>Fuse</th>
-<th>Library _fuse_sectionneurs_porte_fusibles</th>
+<th>fuse_switche</th>
+<th>library _fuse_switches</th>
 </tr>
 </thead>
 <tbody>
@@ -946,8 +1061,8 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <table>
 <thead>
 <tr>
-<th>Fuse</th>
-<th>library _relais_thermiques</th>
+<th>thermal_relay</th>
+<th>library _thermal_relays</th>
 </tr>
 </thead>
 <tbody>
@@ -960,8 +1075,22 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <table>
 <thead>
 <tr>
-<th>AC_motors</th>
-<th>library _alternative_engines</th>
+<th>magnetic_relay</th>
+<th>library _magnetic_relays</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imag =</td>
+<td>magnetic threshold [0.1 to 100 A]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>AC_motor</th>
+<th>library _ac_motors</th>
 </tr>
 </thead>
 <tbody>
@@ -986,16 +1115,16 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <td>rated voltage at winding terminals [127 to 400 V]</td>
 </tr>
 <tr>
-<td>coupling = - [star, triangle]</td>
-<td></td>
+<td>coupling =</td>
+<td>winding coupling [star, triangle]</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>DC_motors</th>
-<th>library _moteurs_continus</th>
+<th>DC_motor</th>
+<th>library _dc_motors</th>
 </tr>
 </thead>
 <tbody>
@@ -1020,15 +1149,11 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <table>
 <thead>
 <tr>
-<th>source, stabilized power supply, transformer</th>
-<th>library \ _sources</th>
+<th>electrical source</th>
+<th>library _supplies</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>pressure =</td>
-<td>compressed air pressure [0 to 10 bar]</td>
-</tr>
 <tr>
 <td>vin =</td>
 <td>input voltage [12 to 400 V]</td>
@@ -1050,8 +1175,8 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <table>
 <thead>
 <tr>
-<th>power resistors</th>
-<th>library _resistances</th>
+<th>power resistor</th>
+<th>library _resistors</th>
 </tr>
 </thead>
 <tbody>
@@ -1068,14 +1193,14 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <table>
 <thead>
 <tr>
-<th>Potentiometer</th>
-<th>library _resistances</th>
+<th>potentiometer</th>
+<th>library _resistors</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>value =</td>
-<td>potentiometer resistance [1m to 10M ohms], (10m, 10, 10k, 2.2 M)</td>
+<td>potentiometer resistance [1m to 10M ohms], examples : (10m, 10, 10k, 2.2 M)</td>
 </tr>
 <tr>
 <td>alpha =</td>
@@ -1087,21 +1212,21 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <thead>
 <tr>
 <th>simple resistance</th>
-<th>library _resistances</th>
+<th>library _resistors</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>value =</td>
-<td>resistance [1m to 10M ohms], (10m, 10, 10k, 2.2 M)</td>
+<td>resistance [1m to 10M ohms], examples : (10m, 10, 10k, 2.2 M)</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>measuring_instruments</th>
-<th>library</th>
+<th>measurement_instrument</th>
+<th>library _measurement_instruments</th>
 </tr>
 </thead>
 <tbody>
@@ -1116,6 +1241,22 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 <tr>
 <td>*</td>
 <td>ditto that <strong>display here</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="pneumatic-component-settings">Pneumatic component settings</h2>
+<p>(available in 'Modify an object' in WinRelais)</p>
+<table>
+<thead>
+<tr>
+<th>air pressure source</th>
+<th>library _supplies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pressure =</td>
+<td>compressed air pressure [0 to 145 psi] [0 to 10 bar]</td>
 </tr>
 </tbody>
 </table>
