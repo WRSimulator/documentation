@@ -457,27 +457,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preamble" class="md-nav__link">
+  <a href="#preambule" class="md-nav__link">
     <span class="md-ellipsis">
-      Preamble
+      Préambule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Préambule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller-axis-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Axis demo
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#atv31-settings" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#description-rapide" class="md-nav__link">
     <span class="md-ellipsis">
-      ATV31 settings
+      Description rapide
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#codesys-axis-controller-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      CODESYS axis controller program
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#atv11-settings" class="md-nav__link">
+  <a href="#axis-controller-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      ATV11 settings
+      Axis controller parameters
     </span>
   </a>
   
@@ -558,27 +582,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preamble" class="md-nav__link">
+  <a href="#preambule" class="md-nav__link">
     <span class="md-ellipsis">
-      Preamble
+      Préambule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Préambule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller-axis-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Axis demo
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#atv31-settings" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#description-rapide" class="md-nav__link">
     <span class="md-ellipsis">
-      ATV31 settings
+      Description rapide
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#codesys-axis-controller-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      CODESYS axis controller program
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#atv11-settings" class="md-nav__link">
+  <a href="#axis-controller-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      ATV11 settings
+      Axis controller parameters
     </span>
   </a>
   
@@ -603,224 +651,112 @@
 
 
 <h1 id="axis-controller">Axis controller</h1>
-<h2 id="preamble">Preamble</h2>
-<p>WRsimulator can be used to insert variable speed drives into folios. The library currently includes SchneiderElectric ATV31 single-phase and three-phase drive objects.</p>
-<p>Example <strong>us18 - demo_Speed_Drive_ATV31_1ph_2C.xrs</strong> illustrates the use of an ATV31 drive to control the speed of a moving table.
-<img alt="" src="../media/speed_atv31.png" />
-- the drive is attached to a text zone edited in WinRelais, which specifies its parameters,
-- The first line of the text zone must begin with the command :
-    - <strong>parent =</strong> drive name,
-- This text zone can be placed anywhere in the diagram,
-- If the text field does not exist, the drive is set to default parameters.</p>
-<h2 id="atv31-settings">ATV31 settings</h2>
-<p><a href="../assets/Schneider-Altivar-31-Programming.pdf">Schneider-Altivar-31-Programming.pdf</a></p>
+<h2 id="preambule">Préambule</h2>
+<p>WRsimulateur permet d'insérer des contrôleurs d'axe dans les folios. </p>
+<p>L'exemple <strong>us43-demo_controller_axis_CODESYS.xrs</strong> illustre la mise en œuvre d'un contrôleur d'axe <strong>IAI-SCON2</strong> pour contrôler le positionnement dune table élévatrice.</p>
+<h3 id="controller-axis-demo">Controller Axis demo</h3>
+<p><img alt="" src="../assets/axis_controller.png" /></p>
+<h3 id="description-rapide">Description rapide</h3>
+<ul>
+<li>L'automate virtuel CODESYS ControlWin 64 est connecté au contrôleur d'axe  simulé par WRSimulateur via Modbus TCP-IP.</li>
+<li>L'interaction entre l'automate et le contrôleur passe par une table d'échange qui comprend 5 mots. (%QW5.0 à %QW5.2 et %IW5.0 à %IW5.1 dans l'exemple)</li>
+<li>Le programme du projet <strong>us43-demo_controller_axis_CODESYS.project</strong> ajuste les bits de contrôle du registre <strong>axis_ctrl</strong> du contrôleur selon l'état des boutons connectés à ses entrées.</li>
+<li>La vitesse et le point de consigne sont imposés par le programme (lignes 9 et 10 du programme ci-dessous)</li>
+<li>On peut tester le comportement du positionnement de la table mobile en forçant les valeurs des registres <strong>axis_setpoint</strong> et <strong>axis_speed</strong></li>
+</ul>
+<h3 id="codesys-axis-controller-program">CODESYS axis controller program</h3>
+<p><img alt="" src="../assets/axis_controller_CODESYS.png" /></p>
+<h2 id="axis-controller-parameters">Axis controller parameters</h2>
+<p><a href="../assets/SCON2-CE0401-1.1A.pdf">SCON2-CE0401-1.1A.pdf</a></p>
+<p>Les adresses des mots API utilisés dans les tableaux suivants sont donnés à titre d'exemple. Il est possible de choisir des adresses différentes dans la cartographie de l'API virtuel:</p>
+<p><img alt="" src="fr/media/modbus_modules.png" /></p>
 <table>
 <thead>
 <tr>
-<th>Default settings</th>
+<th>Paramètre par défaut</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>In = 10</td>
-<td>Inverter calibration</td>
+<td>In = 10 A</td>
+<td>Calibre du contrôleur d'axe</td>
 </tr>
 <tr>
-<td>bFr = 50</td>
-<td>Standard motor frequency [50,60]</td>
+<td>axis_ctrl = %QW5.0</td>
+<td>Bits de contrôle</td>
 </tr>
 <tr>
-<td>ItH = 10.0</td>
-<td>Motor thermal protection [0.2 to 1.5 In]</td>
+<td>axis_setpoint = %QW5.1</td>
+<td>Consigne de position</td>
 </tr>
 <tr>
-<td>CLI = 15.0</td>
-<td>Current limitation [0.25 to 1.5 In]</td>
+<td>axis_speed = %QW5.2</td>
+<td>Vitesse de déplacement de l'axe en %</td>
 </tr>
 <tr>
-<td>ACC = 3.0</td>
-<td>Acceleration ramp time [0.1 to 3276 s]</td>
+<td>axis_status = %IW5.0</td>
+<td>Statut du conrôleur d'axe</td>
 </tr>
 <tr>
-<td>dEC = 3.0</td>
-<td>Deceleration ramp time [0.1 to 3276 s]</td>
+<td>axis_position = %IW5.1</td>
+<td>Position de l'axe en %</td>
 </tr>
 <tr>
-<td>LSP = 0</td>
-<td>Low speed [0 Hz to HSP]</td>
+<td>home_point = 0 mm</td>
+<td>Valeur de la position du point home en mm</td>
 </tr>
 <tr>
-<td>HSP = 50</td>
-<td>High speed [LSP to bFR]</td>
-</tr>
-<tr>
-<td>PS2 = n0</td>
-<td>2 preset speeds [n0,LI3,LI4,LI5,LI6]</td>
-</tr>
-<tr>
-<td>PS4 = n0</td>
-<td>4 preselected speeds [n0,LI3,LI4,LI5,LI6]</td>
-</tr>
-<tr>
-<td>PS8 = n0</td>
-<td>8 preselected speeds [n0,LI3,LI4,LI5,LI6]</td>
-</tr>
-<tr>
-<td>SP2 = 10</td>
-<td>Preset speed 2 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP3 = 15</td>
-<td>Preset speed 3 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP4 = 20</td>
-<td>Preset speed 4 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP5 = 25</td>
-<td>Preset speed 5 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP6 = 30</td>
-<td>Preset speed 6 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP7 = 35</td>
-<td>Preset speed 7 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP8 = 40</td>
-<td>Preset speed 8 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>tCC = 2C</td>
-<td>Control 2wire / 3wire [2C, 3C]</td>
-</tr>
-<tr>
-<td>tCt = trn</td>
-<td>Control type 2wire [LEL, trn, PFO]</td>
-</tr>
-<tr>
-<td>r1 = FLt</td>
-<td>Relay r1 [n0,FLt,rUn,FtA,FLA,CtA,SrA,tSA,APL,LI1,LI2,LI3,LI4,LI5,LI6]</td>
-</tr>
-<tr>
-<td>r2 = n0</td>
-<td>Relay r2 [n0,FLt,rUn,FtA,FLA,CtA,SrA,tSA,bLC,APL,LI1,LI2,LI3,LI4,LI5,LI6]</td>
-</tr>
-<tr>
-<td>FSt = n0</td>
-<td>Fast stop on logic 0 [n0, LI1, LI2, LI3, LI4, LI5, LI6]</td>
-</tr>
-<tr>
-<td>LAF = n0</td>
-<td>Forward limit switch [n0, LI1, LI2, LI3, LI4, LI5, LI6]</td>
-</tr>
-<tr>
-<td>LAr = n0</td>
-<td>Stroke end forward [n0, LI1, LI2, LI3, LI4, LI5,LI6]</td>
-</tr>
-<tr>
-<td>LAS = nSt</td>
-<td>Stop type at end of stroke [rMP, FSt, nSt]</td>
-</tr>
-<tr>
-<td>FR1 = AII</td>
-<td>Setpoint 1 configuration [AII, AI2, AI3]</td>
+<td>max_position = 700 mm</td>
+<td>Valeur de la position du point max en mm</td>
 </tr>
 </tbody>
 </table>
-<h2 id="atv11-settings">ATV11 settings</h2>
-<p><a href="../assets/ATV11_UserManual.pdf">ATV11_UserManual.pdf</a></p>
 <table>
 <thead>
 <tr>
-<th>default settings</th>
-<th>Description</th>
+<th>axis_ctrl</th>
+<th>Description des bits</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>In = 10</td>
-<td>Inverter calibration</td>
+<td>set servo (%QW5_0.0)</td>
+<td>Autorise le fonctionnement du contrôleur d'axe [False,True]</td>
 </tr>
 <tr>
-<td>bFr = 50</td>
-<td>Standard motor frequency [50,60]</td>
+<td>stop move (%QW5_0.1)</td>
+<td>Demande l'arrêt du mouvement [False,True]</td>
 </tr>
 <tr>
-<td>ItH = 10.0</td>
-<td>Motor thermal protection [0.2 to 1.5 In]</td>
+<td>goto home (%QW5_0.2)</td>
+<td>Demande le retour à la position home [False,True]</td>
 </tr>
 <tr>
-<td>CLI = 15.0</td>
-<td>Current limitation [0.25 to 1.5 In]</td>
+<td>goto setpoint (%QW5_0.3)</td>
+<td>Demande le positionnement au point de consigne [False,True]</td>
 </tr>
 <tr>
-<td>ACC = 3.0</td>
-<td>Acceleration ramp time [0.1 to 3276 s]</td>
+<td>raz default (%QW5_0.4)</td>
+<td>Demande la RAZ des défauts (surcharge) [False,True]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>axis_status</th>
+<th>Description  des bits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setpoint_reached (%IW5.0)</td>
+<td>La position de consigne est atteinte [False,True]</td>
 </tr>
 <tr>
-<td>dEC = 3.0</td>
-<td>Deceleration ramp time [0.1 to 3276 s]</td>
-</tr>
-<tr>
-<td>LSP = 0</td>
-<td>Low speed [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>HSP = 50</td>
-<td>High speed [LSP to bFR]</td>
-</tr>
-<tr>
-<td>SP2 = 10</td>
-<td>Preset speed 2 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP3 = 25</td>
-<td>Preset speed 3 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>SP4 = 50</td>
-<td>Preset speed 4 [0 Hz to HSP]</td>
-</tr>
-<tr>
-<td>Alt = 5U</td>
-<td>Analog input configuration [5U, 10U, 0A, 4A]</td>
-</tr>
-<tr>
-<td>ACt = 2C</td>
-<td>2-wire / 3-wire control [2C, 3C]</td>
-</tr>
-<tr>
-<td>tCt = trn</td>
-<td>2-wire control type [LEL, trn, PFO]</td>
-</tr>
-<tr>
-<td>rrS = n0</td>
-<td>Rear direction [n0,LII,LI2,LI3,LI4]</td>
-</tr>
-<tr>
-<td>LIA = n0</td>
-<td>LIA input assignment [n0,LII,LI2,LI3,LI4]</td>
-</tr>
-<tr>
-<td>LIb = n0</td>
-<td>Input assignment LIb [n0,LII,LI2,LI3,LI4]</td>
-</tr>
-<tr>
-<td>dO = n0</td>
-<td>[n0, 0Cr, rFr, FtA, SrA CtA]</td>
-</tr>
-<tr>
-<td>Ftd = 50</td>
-<td>Threshold frequency (0 to 200 Hz)</td>
-</tr>
-<tr>
-<td>Ctd = 10</td>
-<td>Current threshold [0 to 1.5 In]</td>
+<td>homepoint_reached (%IW5.1)</td>
+<td>La position Home est atteinte [False,True]</td>
 </tr>
 </tbody>
 </table>
