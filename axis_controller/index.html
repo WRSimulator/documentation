@@ -673,42 +673,42 @@
 <table>
 <thead>
 <tr>
-<th>Paramètre par défaut</th>
+<th>Default parameter</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>In = 10 A</td>
-<td>Calibre du contrôleur d'axe</td>
+<td>Axis Controller caliber</td>
 </tr>
 <tr>
 <td>axis_ctrl = %QW5.0</td>
-<td>Bits de contrôle</td>
+<td>Control bits</td>
 </tr>
 <tr>
 <td>axis_setpoint = %QW5.1</td>
-<td>Consigne de position</td>
+<td>Position setpoint</td>
 </tr>
 <tr>
 <td>axis_speed = %QW5.2</td>
-<td>Vitesse de déplacement de l'axe en %</td>
+<td>Axis movement speed in %</td>
 </tr>
 <tr>
 <td>axis_status = %IW5.0</td>
-<td>Statut du conrôleur d'axe</td>
+<td>Axis controller status</td>
 </tr>
 <tr>
 <td>axis_position = %IW5.1</td>
-<td>Position de l'axe en %</td>
+<td>Axis position (%)</td>
 </tr>
 <tr>
 <td>home_point = 0 mm</td>
-<td>Valeur de la position du point home en mm</td>
+<td>Home position value (mm)</td>
 </tr>
 <tr>
 <td>max_position = 700 mm</td>
-<td>Valeur de la position du point max en mm</td>
+<td>Max position value (mm)</td>
 </tr>
 </tbody>
 </table>
@@ -716,29 +716,29 @@
 <thead>
 <tr>
 <th>axis_ctrl</th>
-<th>Description des bits</th>
+<th>Bit descriptions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>set servo (%QW5_0.0)</td>
-<td>Autorise le fonctionnement du contrôleur d'axe [False,True]</td>
+<td>Enables the axis controller operation [False,True]</td>
 </tr>
 <tr>
 <td>stop move (%QW5_0.1)</td>
-<td>Demande l'arrêt du mouvement [False,True]</td>
+<td>Stop motion request [False,True]</td>
 </tr>
 <tr>
 <td>goto home (%QW5_0.2)</td>
-<td>Demande le retour à la position home [False,True]</td>
+<td>Requests return to home position [False,True]</td>
 </tr>
 <tr>
 <td>goto setpoint (%QW5_0.3)</td>
-<td>Demande le positionnement au point de consigne [False,True]</td>
+<td>Requests positioning to setpoint [False,True]</td>
 </tr>
 <tr>
 <td>raz default (%QW5_0.4)</td>
-<td>Demande la RAZ des défauts (surcharge) [False,True]</td>
+<td>Requests fault reset (overload) [False,True]</td>
 </tr>
 </tbody>
 </table>
@@ -746,17 +746,17 @@
 <thead>
 <tr>
 <th>axis_status</th>
-<th>Description  des bits</th>
+<th>Bit descriptions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>setpoint_reached (%IW5.0)</td>
-<td>La position de consigne est atteinte [False,True]</td>
+<td>Setpoint position reached [False,True]</td>
 </tr>
 <tr>
 <td>homepoint_reached (%IW5.1)</td>
-<td>La position Home est atteinte [False,True]</td>
+<td>Home position reached [False,True]</td>
 </tr>
 </tbody>
 </table>
