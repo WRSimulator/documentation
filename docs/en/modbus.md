@@ -32,7 +32,14 @@
 
 ## MODBUS mapping
 
+Mapping example with **QW_adress** = 400 et **IW_adress** = 500
+
 ![](media/mappage_modbus.png)
+
+Mapping example with **QW_adress** = 0 et **IW_adress** = 24  (used by **CODESYS**)
+
+![](media/mappage_modbus_codesys.png)
+
 
 
 ## MODBUS Configuration 
@@ -41,10 +48,13 @@
 
 |                      |                                              ||
 | -------------- | ------------------------------ ||
-| ip_adress | localhost/127.0.0.1/xxx.xxx.xxx.xxx|IP address of PLC server|
-| port | 502|standard MODBUS port|
-| unit_ID | 111 | customer_id|
-| exchange_table_address | 400 |pointer on exchange table|
+| ip_adress | localhost/127.0.0.1/192.168.0.10|PLC server IP adress|
+| port |   502|standard MODBUS port|
+| unit_ID |  111 |unit ID|
+| QW_adress|  400 |PLC output table pointer|
+| IW_adress |  500 |PLC input table pointer|
 
-- If the MODBUS configuration object is not set in your project, the default values used are: ip_address = local_host, port = 502, exchange_table_address = 400 and unit_ID = 111.
+- **QW_adress** et **IW_adress** are used to set the pointers for the PLC's output and input tables. The distance between these two pointers must be at least 24 words (16 bits) to avoid overlapping tables.
+- **24** corresponds to the number of holding registers used in Modbus requests (24 words for inputs and 24 words for outputs).
+- If the MODBUS configuration object is not placed in your project, the default values used are: ip_address = local_host, port = 502, QW_address = 400, IW_address = 500 and unit_ID = 111.
 - The MODBUS configuration object is only required when a PLC is present in a folio.

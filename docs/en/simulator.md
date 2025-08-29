@@ -9,7 +9,7 @@
 - To launch the simulator, click on the icon:
 ![](media/launch_icon.png)
 
-- right-click on a simulable object to :
+- right-click on a simulation object to :
     - edit its properties,
     - rotate synoptic and cylinder objects to the nearest degree.
 ![](media/right_click.png)
@@ -25,7 +25,7 @@
 
 ### drawing editing
 
-- At present, there is no 'tool' for converting previous schematics into simulable schematics.
+- At present, there is no 'tool' for converting previous schematics into simulation schematics.
 - Line width for conductors is fixed.
 - Only the 'Arial' font is supported.
 - Left' text alignment only.

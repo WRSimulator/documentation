@@ -91,7 +91,7 @@ Les liaisons glissières sont disponibles dans la bibliothèque **\_Synoptique**
 |controle_direction  =| désigne l'objet moteur utilisé pour contrôler le mobile en direction|
 |controle_vitesse  =| désigne l'objet moteur utilisé pour contrôler le mobile en vitesse|
 |vitesse  =|vitesse en % de la vitesse du moteur (transcrite en vitesse linéaire). \[0 à100%\]|
-|friction  =|fixe la friction de la surface du mobile \[0 à 100\]|
+|friction  =|fixe la friction de la surface du mobile \[0 à 100%\]|
 |id_collision  =| * (valeur par défaut, détecte tout objet entrant en collision)|
 |parent  =| désigne un parent qui ne peut-être qu'une autre liaison glissière|
 |nom_texture  =| nom de la texture qui peut-être appliquée au mobile.|

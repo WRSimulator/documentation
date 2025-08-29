@@ -21,7 +21,7 @@ This module allows you to draw a chronogram (up to 16 variables) during simulati
 |state|status active/not active|fdc_haut.state : status of high limit switch|
 |speed|motor object speed|M1.speed : M1 motor speed|
 |direction|sense of rotation motor object|M1.rotation : direction of rotation of motor M1|
-|value.caliber|measured value and caliber|A1.value.10 : current measured by ammeter A1 calibrated 10 A|
+|value.caliber|measured value and caliber|A1.value.10:current measured by ammeter A1 calibrated 10A|
 
 
 

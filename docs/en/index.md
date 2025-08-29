@@ -4,10 +4,9 @@
 
 | | |
 | -------------- | --------------------------------------------- |
-| **Revision 2** | **september 2024** |
+| **Revision 4** | **september 2025** |
 | Software | WRSimulator|
-| Version | 1.5 on WinRelay Studio 2.5.0 (2.5c) |
-| Author |Frédéric POPEK |
+| Version | 1.6 on WinRelay Studio 2.5.2 (2.5g) |
 | Editor | INGEREA |
 
 ## Simulator objectives

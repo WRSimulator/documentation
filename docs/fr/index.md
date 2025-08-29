@@ -4,10 +4,9 @@
 
 |                      |                                              |
 | -------------- | --------------------------------------------- |
-| **Révision 2** |  **septembre 2024** |
+| **Révision 3** |  **janvier 2025** |
 | Logiciel       | WRSimulateur|
-| Version        | 1.5 portée par WinRelais Studio  2.5.0 (2.5c) |
-| Auteur           |Frédéric POPEK |
+| Version        | 1.5 portée par WinRelais Studio  2.5.1 (2.5d) |
 | Editeur        | INGEREA |
 
 ## Objectifs du simulateur

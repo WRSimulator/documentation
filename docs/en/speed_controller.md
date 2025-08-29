@@ -2,7 +2,8 @@
 
 ## Preamble
 WRsimulator can be used to insert variable speed drives into folios. The library currently includes SchneiderElectric ATV31 single-phase and three-phase drive objects.
-Example **18-demo_variateurATV31** illustrates the use of an ATV31 drive to control the speed of a moving table.
+
+Example **us18 - demo_Speed_Drive_ATV31_1ph_2C.xrs** illustrates the use of an ATV31 drive to control the speed of a moving table.
 ![](media/speed_atv31.png)
 - the drive is attached to a text zone edited in WinRelais, which specifies its parameters,
 - The first line of the text zone must begin with the command :
@@ -12,7 +13,7 @@ Example **18-demo_variateurATV31** illustrates the use of an ATV31 drive to cont
 
 ## ATV31 settings
 
-[ATV31_programming_manual_FR_1624588_04.pdf](assets/ATV31_programming_manual_FR_1624588_04.pdf)
+[Schneider-Altivar-31-Programming.pdf](assets/Schneider-Altivar-31-Programming.pdf)
 
 |Default settings |Description |
 | ------------------ | ------------ |

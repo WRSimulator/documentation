@@ -81,13 +81,13 @@ Slider links are available in the **\_Synoptique** library and are prefixed with
 
 |slider |library|_Synoptic|
 | ---------------| ----------------------------------------------------------------------------------------|
-|controle_direction =| designates the motor object used to control the mobile in direction|
+|control_direction =| designates the motor object used to control the mobile in direction|
 |speed_control =| designates the motor object used to control the mobile in speed|
-|speed =|speed in % of motor speed (transcribed as linear speed). \[0 à100%\]|
-|friction =|fixes the friction of the motor surface \[0 to 100\]|
+|speed =|speed in % of motor speed (transcribed as linear speed). \[0 to 100%\]|
+|friction =|fixes the friction of the mobile surface \[0 to 100%\]|
 |id_collision =| * (default value, detects any object that collides)|
 |parent =| designates a parent which can only be another sliding link|
-|texture_name =| name of the texture that can be applied to the mobile.
+|texture_name =| name of the texture that can be applied to the mobile|
 
 - Elements of a sliding connection that can be edited in WinSymbol :
 - These elements are differentiated in WinSymbol by specific colors:
@@ -98,6 +98,7 @@ Slider links are available in the **\_Synoptique** library and are prefixed with
 
 - Examples
 ![](media/slider_examples.png)
+
 
 ## Cylinder actuator
 A cylinder is a specialized sliding link.

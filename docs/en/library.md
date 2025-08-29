@@ -1,4 +1,4 @@
-# Simulable library
+# Simulation library
 
 ## Access
 
@@ -90,7 +90,6 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 |\_Contactors|WinSymbol only|
 |\_Control_Contacts|Texture or WinSymbol|
 |\_Cylinders|WinSymbol only|
-
 |\_DC_Motors|WinSymbol only|
 |\_Detectors|Texture or WinSymbol|
 |\_Diodes|WinSymbol only|
@@ -121,25 +120,33 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 - A symbol with the default drawing mode 'Texture' can be transformed into another symbol with a modified texture, or with a WinSymbol description.
 
 
-## General component settings
+## Electrical component settings
 (available in 'Modify an object' in WinRelais)
 
-| Relay, Timer, Timer|Library \_Coils|
+| Relay, Timer, Timer|library \_Coils|
 | -------------- |------|
 |vn = |coil voltage [12 to 230 V]|
 |pn = |rated power \[12 to 230 V\]|
 |toff = |deactivation delay \[0 to 30 s\]|
 |ton = |activation delay \[0 to 30 s\]|
 
-| timed contacts|library \_contacts_commande|
+| timed contacts|library \_control_contacts|
 | -------------- |---|
 |toff = |deactivation delay \[0 to 30 s\]|
-|ton = Activation delay \[0 to 30 s\]|
+|ton = |activation delay \[0 to 30 s\]|
 
-| Signaling|library \_signaling|
+| bulb|library \_building|
+| ------------------------ |---|
+|vn = |bulb voltage \[12 to 230 V\]|
+|pn = |bulb power \[0.5 to 2000 W\]|
+|color = |bulb color [red, green, blue, orange, white]|
+|display here |position of measured value on folio|
+|* |ditto that **display here**|
+
+| indicator|library \_indicators|
 | ------------------------ |---|
 |v = |coil voltage \[12 to 230 V\]|
-|color = LED color [red, green, blue, orange, white]|
+|color = |light color [red, green, blue, orange, white]|
 
 |circuit breaker + DDR |library \_circuit breakers|
 | -------------------------------------------------- |---|
@@ -149,60 +156,71 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 |idn = |sensitivity of differential \[10 to 10000 mA\]|
 |diff_delay = |intentional delay of the DDR \[0 to 10000 ms\]|
 
-|Fuse|Library \_fuse_sectionneurs_porte_fusibles |
+|fuse_switche |library \_fuse_switches|
 | -------------------------------------------------- |---|
 |In = |fuse rating \[0.5 to 100 A\]|
 |delay = |intentional delay \[0 to 10000 ms\]|
 |type = |type of cartridge \[aM, gG\]|
 
-|Fuse| library \_relais_thermiques |
+|thermal_relay| library \_thermal_relays|
 | -------------------------------------------------- |---|
 |ith = |thermal threshold [0.1 to 100 A\]|
 
-| AC_motors|library \_alternative_engines|
+|magnetic_relay| library \_magnetic_relays|
+| -------------------------------------------------- |---|
+|imag = |magnetic threshold [0.1 to 100 A\]|
+
+| AC_motor|library \_ac_motors|
 | -------------------------------------------------- |-------------|
 |Pu = |motor output power [90 W to 22 kW]|
 |nm = |nominal motor speed \[740 to 3000 rpm]|
 |cos = |cos(phi) motor \[0.5 to 1\]|
 |efficiency = |motor efficiency \[0.5 to 1\]|
 |winding = |rated voltage at winding terminals \[127 to 400 V\]|
-|coupling = - \[star, triangle]|
+|coupling = |winding coupling \[star, triangle]|
 
-|DC_motors| library \_moteurs_continus|
+|DC_motor| library \_dc_motors|
 | -------------------------------------------------- |---|
 |pu = |motor output power [90 W to 22 kW]|
 |nm = |motor rated speed \[740 to 3000 rpm]|
 |armature = |armature voltage \[12 to 320 V\]|
 |efficiency =| motor efficiency \[0.5 to 1\]|
 
-| source, stabilized power supply, transformer | library \ _sources |
+| electrical source| library \_supplies |
 | ------------------------------------------------------|-------|
-|pressure = |compressed air pressure \[0 to 10 bar\]|
 |vin = |input voltage \[12 to 400 V\]|
 |vout = |output voltage \[12 to 400 V\]|
 |vout1 = |output voltage \[12 to 400 V\]|
 |vout2 = |output voltage [12 to 400 V]|
 
-|power resistors | library \_resistances |
+|power resistor | library \_resistors |
 | -------------------------------------------------- |---|
 |pn = |rated power [10 W to 22 kW]|
 |winding = |nominal voltage at the terminals of a winding \[230 or 400 V\]|
 
-|Potentiometer | library \_resistances|
+|potentiometer | library \_resistors|
 | -------------------------------------------------- |---|
-|value = |potentiometer resistance [1m to 10M ohms], (10m, 10, 10k, 2.2 M)|
+|value = |potentiometer resistance [1m to 10M ohms], examples : (10m, 10, 10k, 2.2 M)|
 |alpha = |position of slider \[0 to 100 %\]|
 
 
-|simple resistance|library \_resistances|
+|simple resistance|library \_resistors|
 | -------------------------------------------------- |---|
-|value = |resistance \[1m to 10M ohms\], (10m, 10, 10k, 2.2 M)|
+|value = |resistance \[1m to 10M ohms\], examples : (10m, 10, 10k, 2.2 M)|
 
-|measuring_instruments| library
+|measurement_instrument| library \_measurement_instruments|
 | -------------------------------------------------- |---|
 |type = |measurement type [avg, rms]|
 |display here |position of measured value on folio|
 |* |ditto that **display here**|
+
+## Pneumatic component settings
+(available in 'Modify an object' in WinRelais)
+
+| air pressure source| library \_supplies |
+| ------------------------------------------------------|-------|
+|pressure = |compressed air pressure \[0 to 145 psi\] [0 to 10 bar\]|
+
 
 ## Electrical component labels:
 Symbols used in the simulation to indicate the status of electrical components:

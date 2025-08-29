@@ -1,7 +1,7 @@
 # Programmable Logic Controller
 ## Preamble
 - The simulator integrates a physical or virtual PLC into a folio.
-- Communication with the PLC is carried out using the [Modbus/Tcp-IP] protocol (modbus.md) :
+- Communication with the PLC is carried out using the [Modbus/Tcp-IP] protocol (modbus.md)
     - with the local IP address (127.0.0.1) of the Modbus server integrated into the virtual PLC,
     - with the static IP address of the Modbus server integrated into the physical PLC connected to an Ethernet network.
 - This solution makes it possible to use the usual PLC programming tools.
@@ -12,18 +12,53 @@
     - the simulator updates the SAP status.
 - PLCs tested :
     - **M221** Schneider Electric function codes 3,16 and 23, integrated Modbus server
-    -  M340** Schneider Electric function codes 3 and 16, integrated modbus server
-    -  Unilogic** Unitronics function codes 3,16 and 23, Modbus server configuration required:
+    -  **M340** Schneider Electric function codes 3 and 16, integrated modbus server
+    -  **Unilogic** Unitronics function codes 3,16 and 23, Modbus server configuration required
 
 ![](media/unilogic.png)
   
+- **CODESYS Control Win** CODESYS 3.5, codes 3,16 et 23, Modbus server configuration required
+  
+    ![](en/media/codesys00.png)
+    ![](en/media/codesys0.png)
+    ![](en/media/codesys1.png)
+    ![](en/media/codesys2.png)
+    ![](en/media/codesys3.png)
 
-The example below uses **EcoStruxure Basic Expert from SchneiderElectric** to program and simulate M221 family PLCs.
+  - Only holding registers are used.
+    - 48 registers (16-bit word) are allocated:
+        - 24 registers for outputs, table start address: **QW_address** = 0,
+        - 24 registers for inputs, table start address: **IW_address** = 24.
+    - The variables used in the program are assigned directly in the Modbus I/O mapping.
+    - The parameter **writable** is ticked to authorize the server to write to the 24 output registers **%QWx.y** of modules M0 to M5.  
 
-## Elevator example
-(fichiers us15 - demo_elevator_M221.xrs et us15 - demo_elevator_M221.smbp)
 
-### WRsimulator Preparation :
+
+## Virtual PLC front panel
+
+![](en/media/modbus_modules.png)
+
+- Each I/O module integrates four input words and four 16-bit output words.
+- These words can be specified as :
+    - analog' inputs or outputs,
+    - digital inputs or outputs.
+- Finally, each module can manage :
+    - up to 64 digital inputs and 64 digital outputs,
+    - a mix of digital and analog I/Os, e.g. module 0:
+        - %QW0.0 -> 16-bit word for an 'analog' output
+        - %QW0.1 -> 16 bits usable for 16 digital outputs
+        - %IW0.0 -> 16 bits usable for 16 digital inputs
+
+The following examples illustrate the use of dE/S modules.
+
+
+## M221 Elevator example
+Files :
+
+- us15 - demo_elevator_M221.xrs
+- us15 - demo_elevator_M221.smbp (**Ecostruxure**)
+
+### Preparation side Simulator
 
 ![](media/lift_example.png)
 
@@ -57,7 +92,7 @@ The example below uses **EcoStruxure Basic Expert from SchneiderElectric** to pr
 |%Q0.2|DESCENDRE|go down cab|
 |%Q0.3|MONTER|go up cab|
 
-### Preparation side EcoStruxure Machine Expert--Basic
+### Preparation side **EcoStruxure** 
 
 
 The complete program **us15 - demo_elevator_M221.smbp** is available in the : ![](media/image89.png)
@@ -89,13 +124,93 @@ Mapping of input/output tables to the exchange table set at start address %MW400
 In the **Programming ->Tools ->Symbols list** tab, you'll find the input/output assignments that correspond to the tables above:
 ![](media/lift_symbol_list.png)
 
-**PLC program**:
+**PLC program**
 ![](media/lift_sfc.png)
 ![](media/image95.png)
 ![](media/image96.png)
 
 
 Start the controller **BEFORE** starting the simulator by activating the **Start simulation** and **Start controller** buttons in the EcoStruxure commissioning tab.
+
+## CODESYS analogs I/O 
+
+Files :
+
+- us41 - demo_analog_I-O_CODESYS.smbp
+- us41 - demo_analog_I-O_CODESYS.project  (**CODESYS 3.5**)
+
+[Use CODESYS with the simulator](assets/CODESYS_LAUNCH.mp4)
+
+### Preparation side Simulateur
+
+- The diagram implements : 
+    - three analog inputs:
+        - %IW1.0 connected to 4-20 mA sensor B2
+        - %IW1.1 connected to 4-20 mA sensor B1 
+        - %IW1.2 connected to 0-10 V sensor AU1
+    - two analog outputs:
+        - %QW2.0, 0-20 mA current output
+        - %QW2.1, voltage output 0-10 v
+
+- The grapher [Grapher](grapher.md) is parameterized to display the evolution of the %QW2.0 output
+    - Vqw2_0.value.5
+        - Vqw2_0 -> voltmeter name
+        - value -> display of measured value
+        - 5 -> voltmeter rating (250 * 20e-3)* 20e-3)
+
+![](en/media/saw.png)
+
+- The program in the controller adjusts the sawtooth period using the potentiometer on the AU1 sensor connected to %IW1.2.
+
+![](en/media/es_codesys.png)
+
+### Preparation side  **CODESYS**
+
+- Variables are assigned directly in the modbus I/O mapping [Modbus configuration](plc.md) 
+    - %IW1.0 -> IW1_0
+    - %IW1.1 -> IW1_1
+    - %IW1.2 -> IW1_2
+
+- ST code with all I/O registers for visualization
+![](en/media/es_source_codesys.png)
+
+- CODESSYS running
+    - F11 (create code)
+    - Alt-F8 (connect) the CODESYS Control Win Systray controller must be running 
+    - F5 (start)
+
+![](en/media/es_exec_codesys.png)
+
+
+
+
+## CODESYS box sorting 
+
+Files :
+
+- us42 - demo_box_sorting_CODESYS.smbp
+- us42 - demo_box_sorting_CODESYS.project  (**CODESYS 3.5**)
+
+[Use CODESYS with the simulator](assets/CODESYS_LAUNCH.mp4)
+
+### Preparation side Simulateur
+![](en/media/tri_codesys.png)
+
+### Preparation side  **CODESYS**
+
+- Variable assignment is done directly in the modbus I/O mapping [Modbus configuration](plc.md) 
+![](en/media/tri_affec0_codesys.png)
+![](en/media/tri_affec1_codesys.png)
+
+- SFC preparation
+![](en/media/tri_source0_codesys.png)
+
+- ST code with all I/O registers for visualization
+![](en/media/tri_source1_codesys.png)
+
+- CODESSYS at runtime
+![](en/media/tri_exec0_codesy.png)
+![](en/media/tri_exec_codesys.png)
 
 
 ## Building a PLC object
@@ -114,7 +229,7 @@ Start the controller **BEFORE** starting the simulator by activating the **Start
 ![](media/image104.png)
 All these automaton footprints can be adjusted and modified as required.
 
-## Entrées/Sorties logiques
+## Logic Input/Output
 |input, output|library _api|
 | -----------------| -----------------------|
 |%Ir.v or %Qr.v|r = [0,5] v = [0,31] |
@@ -136,7 +251,7 @@ All these automaton footprints can be adjusted and modified as required.
 ## Analog Outputs
 |analog_output|library _api|
 | ---------------| ---------------------------------------------------------|
-|%QW0.0           |r = [0,5] v = [0,3]|
+|%QWr.v           |r = [0,5] v = [0,3]|
 |parent =         |   object name **plc_supply#**|
 |output_type =   | U  or  I|
 |output_range = |(min,max) V [-10,10] V or (min,max) mA [0, 20] mA|

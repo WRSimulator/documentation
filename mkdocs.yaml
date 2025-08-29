@@ -1,19 +1,35 @@
-site_name: wrs
+site_name: WRSimulator documentation
+site_url: https://WRSimulator.github.io/documentation
+repo_url: https://github.com/WRSimulator/documentation
 
+#site_url: https://fredarkin.github.io/wrs_doc
+#repo_url: https://github.com/fredarkin/wrs_doc
+
+# mkdocs serve
+# mkdocs gh-deploy
+
+docs_dir: docs/
+
+copyright: Copyright © 2023-2025 Frédéric Popek for INGEREA
 #theme:   readthedocs # bootstrap4,  windmill
 theme:
- name: mkdocs
+ name: material
+ palette:
+    primary: red
  features:
    - search.highlight
+
+
 nav:
   - Home: index.md
   - Simulator: simulator.md
-  - Simulable library: library.md
+  - Simulation library: library.md
   - Synoptic: synoptic.md
   - Modbus TCP-IP: modbus.md
   - Programmable Logic Controller: plc.md
   - Human Machine Interface: hmi.md
   - Speed Controller: speed_controller.md
+  - Axis Controller: axis_controller.md
   - Grapher: grapher.md
   - Warning list: errors.md
 
@@ -22,7 +38,7 @@ plugins:
   - i18n:
       docs_structure: folder
       fallback_to_default: true
-      #reconfigure_material: true
+      reconfigure_material: true
       reconfigure_search: true
       languages:
         - locale: en
@@ -33,16 +49,20 @@ plugins:
         - locale: fr
           name: Français
           build: true
+          theme:
+            palette:
+                primary: blue
           site_name: "WRSimulateur"
           nav_translations:
             Home: Accueil
             Simulator: Simulateur
-            Simulable library: Bibliothèque simulable
+            Simulation library: Bibliothèque simulable
             Synoptic: Synoptique
             Modbus TCP-IP: Modbus TCP-IP
             Programmable Logic Controller: Automate programmable
             Human Machine Interface: Interface Homme machine
             Speed Controller: Variateur de vitesse
+            Axis Controller: Contrôleur d'axe
             Grapher: Grapheur
             Warning list: Liste avertissements
 

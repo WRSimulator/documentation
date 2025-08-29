@@ -28,9 +28,13 @@
 
 
 ## Mappage MODBUS
+Exemple de mappage avec **adresse_QW** = 400 et **adresse_IW** = 500
 
 ![](media/mappage_modbus.png)
 
+Exemple de mappage avec **adresse_QW** = 0 et **adresse_IW** = 24  (utilisé pour **CODESYS**)
+
+![](media/mappage_modbus_codesys.png)
 
 ## Configuration MODBUS
 
@@ -41,8 +45,11 @@
 | adresse_ip | localhost/127.0.0.1/192.168.0.10|adresse IP du serveur API|
 | port |   502|port normalisé MODBUS|
 | ID_unite |  111 |identifiant du client|
-| adresse_table_echange |  400 |pointeur sur la table d'échange|
+| adresse_QW |  400 |pointeur sur la table des sorties API|
+| adresse_IW |  500 |pointeur sur la table des entrées API|
 
-- Si l'objet de configuration MODBUS n'est pas placé dans votre projet, les valeurs utilisées par défaut sont : adresse_ip = local_host, port = 502, adresse_table_echange = 400 et ID_unite = 111.
+- **adresse_QW** et **adresse_IW** permettent de fixer les pointeurs des tables de sorties et d'entrées de l'API. Il faut que l'écart entre ces deux pointeurs soit au moins de 24 mots (de 16 bits) pour éviter le chevauchement des tables.
+- **24** correspond aux nombres de registres de retenue (holding registers) utilisés dans les requêtes Modbus (24 mots pour les entrées et 24 mots pour les sorties).
+- Si l'objet de configuration MODBUS n'est pas placé dans votre projet, les valeurs utilisées par défaut sont : adresse_ip = local_host, port = 502, adresse_QW = 400, adresse_IW = 500 et ID_unite = 111.
 
 - L'objet de configuration MODBUS est requis  uniquement lorsqu'un automate programmable est présent dans un folio.
