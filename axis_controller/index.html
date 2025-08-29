@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://WRSimulator.github.io/documentation/">
+        <link rel="canonical" href="https://WRSimulator.github.io/documentation/axis_controller/">
       
       
+        <link rel="prev" href="../speed_controller/">
       
-        <link rel="next" href="simulator/">
+      
+        <link rel="next" href="../grapher/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>WRSimulator</title>
+        <title>Axis Controller - WRSimulator</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#axis-controller" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="WRSimulator" class="md-header__button md-logo" aria-label="WRSimulator" data-md-component="logo">
+    <a href=".." title="WRSimulator" class="md-header__button md-logo" aria-label="WRSimulator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Axis Controller
             
           </span>
         </div>
@@ -127,13 +129,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/documentation/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/documentation/fr/" hreflang="fr" class="md-select__link">
+            <a href="../fr/axis_controller/" hreflang="fr" class="md-select__link">
               Français
             </a>
           </li>
@@ -219,7 +221,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="WRSimulator" class="md-nav__button md-logo" aria-label="WRSimulator" data-md-component="logo">
+    <a href=".." title="WRSimulator" class="md-nav__button md-logo" aria-label="WRSimulator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -246,6 +248,166 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulation library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synoptic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synoptic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modbus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modbus TCP-IP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmable Logic Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hmi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Human Machine Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speed_controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Speed Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -262,18 +424,18 @@
           
   
   <span class="md-ellipsis">
-    Home
+    Axis Controller
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Home
+    Axis Controller
   </span>
   
 
@@ -295,53 +457,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simulator-objectives" class="md-nav__link">
+  <a href="#preamble" class="md-nav__link">
     <span class="md-ellipsis">
-      Simulator objectives
+      Preamble
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-steps" class="md-nav__link">
+  <a href="#atv31-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      First steps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="First steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#open-an-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open an example
+      ATV31 settings
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#launch-simulator" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#atv11-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Launch simulator
+      ATV11 settings
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulator-controls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulator controls
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -360,167 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Simulator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="library/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Simulation library
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="synoptic/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Synoptic
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="modbus/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Modbus TCP-IP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="plc/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Programmable Logic Controller
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hmi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Human Machine Interface
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="speed_controller/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Speed Controller
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="axis_controller/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Axis Controller
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="grapher/" class="md-nav__link">
+      <a href="../grapher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -540,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="errors/" class="md-nav__link">
+      <a href="../errors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,53 +558,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simulator-objectives" class="md-nav__link">
+  <a href="#preamble" class="md-nav__link">
     <span class="md-ellipsis">
-      Simulator objectives
+      Preamble
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-steps" class="md-nav__link">
+  <a href="#atv31-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      First steps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="First steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#open-an-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open an example
+      ATV31 settings
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#launch-simulator" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#atv11-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Launch simulator
+      ATV11 settings
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulator-controls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulator controls
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -648,59 +602,228 @@
   
 
 
-<h1 id="home">Home</h1>
-<p><img alt="" src="media/wrs_banner.png" /></p>
+<h1 id="axis-controller">Axis controller</h1>
+<h2 id="preamble">Preamble</h2>
+<p>WRsimulator can be used to insert variable speed drives into folios. The library currently includes SchneiderElectric ATV31 single-phase and three-phase drive objects.</p>
+<p>Example <strong>us18 - demo_Speed_Drive_ATV31_1ph_2C.xrs</strong> illustrates the use of an ATV31 drive to control the speed of a moving table.
+<img alt="" src="../media/speed_atv31.png" />
+- the drive is attached to a text zone edited in WinRelais, which specifies its parameters,
+- The first line of the text zone must begin with the command :
+    - <strong>parent =</strong> drive name,
+- This text zone can be placed anywhere in the diagram,
+- If the text field does not exist, the drive is set to default parameters.</p>
+<h2 id="atv31-settings">ATV31 settings</h2>
+<p><a href="../assets/Schneider-Altivar-31-Programming.pdf">Schneider-Altivar-31-Programming.pdf</a></p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Default settings</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Revision 4</strong></td>
-<td><strong>september 2025</strong></td>
+<td>In = 10</td>
+<td>Inverter calibration</td>
 </tr>
 <tr>
-<td>Software</td>
-<td>WRSimulator</td>
+<td>bFr = 50</td>
+<td>Standard motor frequency [50,60]</td>
 </tr>
 <tr>
-<td>Version</td>
-<td>1.6 on WinRelay Studio 2.5.2 (2.5g)</td>
+<td>ItH = 10.0</td>
+<td>Motor thermal protection [0.2 to 1.5 In]</td>
 </tr>
 <tr>
-<td>Editor</td>
-<td>INGEREA</td>
+<td>CLI = 15.0</td>
+<td>Current limitation [0.25 to 1.5 In]</td>
+</tr>
+<tr>
+<td>ACC = 3.0</td>
+<td>Acceleration ramp time [0.1 to 3276 s]</td>
+</tr>
+<tr>
+<td>dEC = 3.0</td>
+<td>Deceleration ramp time [0.1 to 3276 s]</td>
+</tr>
+<tr>
+<td>LSP = 0</td>
+<td>Low speed [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>HSP = 50</td>
+<td>High speed [LSP to bFR]</td>
+</tr>
+<tr>
+<td>PS2 = n0</td>
+<td>2 preset speeds [n0,LI3,LI4,LI5,LI6]</td>
+</tr>
+<tr>
+<td>PS4 = n0</td>
+<td>4 preselected speeds [n0,LI3,LI4,LI5,LI6]</td>
+</tr>
+<tr>
+<td>PS8 = n0</td>
+<td>8 preselected speeds [n0,LI3,LI4,LI5,LI6]</td>
+</tr>
+<tr>
+<td>SP2 = 10</td>
+<td>Preset speed 2 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP3 = 15</td>
+<td>Preset speed 3 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP4 = 20</td>
+<td>Preset speed 4 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP5 = 25</td>
+<td>Preset speed 5 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP6 = 30</td>
+<td>Preset speed 6 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP7 = 35</td>
+<td>Preset speed 7 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP8 = 40</td>
+<td>Preset speed 8 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>tCC = 2C</td>
+<td>Control 2wire / 3wire [2C, 3C]</td>
+</tr>
+<tr>
+<td>tCt = trn</td>
+<td>Control type 2wire [LEL, trn, PFO]</td>
+</tr>
+<tr>
+<td>r1 = FLt</td>
+<td>Relay r1 [n0,FLt,rUn,FtA,FLA,CtA,SrA,tSA,APL,LI1,LI2,LI3,LI4,LI5,LI6]</td>
+</tr>
+<tr>
+<td>r2 = n0</td>
+<td>Relay r2 [n0,FLt,rUn,FtA,FLA,CtA,SrA,tSA,bLC,APL,LI1,LI2,LI3,LI4,LI5,LI6]</td>
+</tr>
+<tr>
+<td>FSt = n0</td>
+<td>Fast stop on logic 0 [n0, LI1, LI2, LI3, LI4, LI5, LI6]</td>
+</tr>
+<tr>
+<td>LAF = n0</td>
+<td>Forward limit switch [n0, LI1, LI2, LI3, LI4, LI5, LI6]</td>
+</tr>
+<tr>
+<td>LAr = n0</td>
+<td>Stroke end forward [n0, LI1, LI2, LI3, LI4, LI5,LI6]</td>
+</tr>
+<tr>
+<td>LAS = nSt</td>
+<td>Stop type at end of stroke [rMP, FSt, nSt]</td>
+</tr>
+<tr>
+<td>FR1 = AII</td>
+<td>Setpoint 1 configuration [AII, AI2, AI3]</td>
 </tr>
 </tbody>
 </table>
-<h2 id="simulator-objectives">Simulator objectives</h2>
-<p>The aim of the simulator is to enable users to simulate electrical, electrotechnical and pneumatic circuits for educational purposes and for pre-project presentation.</p>
-<p>In particular, the simulator can be used to simulate automated production system-type installations using a virtual or physical PLC connected via MODBUS/TCP-IP, coupled with an animated operating section.</p>
-<p>The simulator incorporates a mixed analog/digital simulation model, enabling simultaneous simulation of:
-- standard electrical/electrotechnical circuits,
-- pneumatic circuits,
-- complex objects (speed controllers, safety relays, etc.)
-- programmable logic controllers,
-- simple operating parts.</p>
-<h2 id="first-steps">First steps</h2>
-<h3 id="open-an-example">Open an example</h3>
-<ul>
-<li>Open an example from WinRelais <strong>File&gt;Open wr-schematic/Simulator_Demos/</strong>.</li>
-<li>A <strong>quick access</strong> to the <strong>Simulator_Demos</strong> folder is built into the installation.
-This allows you to launch WinRelais directly with the selected example.</li>
-</ul>
-<h3 id="launch-simulator">Launch simulator</h3>
-<p>Click on the icon:
-<img alt="" src="media/launch_icon.png" /></p>
-<h3 id="simulator-controls">Simulator controls</h3>
-<ul>
-<li>Simulator checks give three levels of warning:
-<img alt="" src="media/alarm_levels.png" /></li>
-</ul>
-<p><a href="errors/">Warning list</a></p>
+<h2 id="atv11-settings">ATV11 settings</h2>
+<p><a href="../assets/ATV11_UserManual.pdf">ATV11_UserManual.pdf</a></p>
+<table>
+<thead>
+<tr>
+<th>default settings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In = 10</td>
+<td>Inverter calibration</td>
+</tr>
+<tr>
+<td>bFr = 50</td>
+<td>Standard motor frequency [50,60]</td>
+</tr>
+<tr>
+<td>ItH = 10.0</td>
+<td>Motor thermal protection [0.2 to 1.5 In]</td>
+</tr>
+<tr>
+<td>CLI = 15.0</td>
+<td>Current limitation [0.25 to 1.5 In]</td>
+</tr>
+<tr>
+<td>ACC = 3.0</td>
+<td>Acceleration ramp time [0.1 to 3276 s]</td>
+</tr>
+<tr>
+<td>dEC = 3.0</td>
+<td>Deceleration ramp time [0.1 to 3276 s]</td>
+</tr>
+<tr>
+<td>LSP = 0</td>
+<td>Low speed [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>HSP = 50</td>
+<td>High speed [LSP to bFR]</td>
+</tr>
+<tr>
+<td>SP2 = 10</td>
+<td>Preset speed 2 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP3 = 25</td>
+<td>Preset speed 3 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>SP4 = 50</td>
+<td>Preset speed 4 [0 Hz to HSP]</td>
+</tr>
+<tr>
+<td>Alt = 5U</td>
+<td>Analog input configuration [5U, 10U, 0A, 4A]</td>
+</tr>
+<tr>
+<td>ACt = 2C</td>
+<td>2-wire / 3-wire control [2C, 3C]</td>
+</tr>
+<tr>
+<td>tCt = trn</td>
+<td>2-wire control type [LEL, trn, PFO]</td>
+</tr>
+<tr>
+<td>rrS = n0</td>
+<td>Rear direction [n0,LII,LI2,LI3,LI4]</td>
+</tr>
+<tr>
+<td>LIA = n0</td>
+<td>LIA input assignment [n0,LII,LI2,LI3,LI4]</td>
+</tr>
+<tr>
+<td>LIb = n0</td>
+<td>Input assignment LIb [n0,LII,LI2,LI3,LI4]</td>
+</tr>
+<tr>
+<td>dO = n0</td>
+<td>[n0, 0Cr, rFr, FtA, SrA CtA]</td>
+</tr>
+<tr>
+<td>Ftd = 50</td>
+<td>Threshold frequency (0 to 200 Hz)</td>
+</tr>
+<tr>
+<td>Ctd = 10</td>
+<td>Current threshold [0 to 1.5 In]</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -751,10 +874,10 @@ This allows you to launch WinRelais directly with the selected example.</li>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

@@ -453,6 +453,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#frontpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      FrontPanel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#composition" class="md-nav__link">
     <span class="md-ellipsis">
       Composition
@@ -481,6 +490,26 @@
   
   <span class="md-ellipsis">
     Speed Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../axis_controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axis Controller
   </span>
   
 
@@ -592,6 +621,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#frontpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      FrontPanel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#composition" class="md-nav__link">
     <span class="md-ellipsis">
       Composition
@@ -654,8 +692,8 @@
 </thead>
 <tbody>
 <tr>
-<td>hooking =</td>
-<td>False/True</td>
+<td>latching =</td>
+<td>latch the button [0,1] [False,True]</td>
 </tr>
 <tr>
 <td>texture_name =</td>
@@ -681,20 +719,20 @@
 </thead>
 <tbody>
 <tr>
-<td>hooking =</td>
-<td>False/True</td>
+<td>latching =</td>
+<td>allow latching [0,1] [False,True]</td>
 </tr>
 <tr>
 <td>texture_name =</td>
 <td>foreground texture in png format</td>
 </tr>
 <tr>
-<td>texture_name2 =</td>
+<td>texture2_name =</td>
 <td>optional background texture in png format</td>
 </tr>
 <tr>
 <td>state =</td>
-<td>0,1,2: switch position, only if snap = True</td>
+<td>0,1,2: switch position, only if latching parameter = True</td>
 </tr>
 </tbody>
 </table>
@@ -716,12 +754,35 @@
 <td>foreground texture in png format</td>
 </tr>
 <tr>
-<td>texture_name2 =</td>
+<td>texture2_name =</td>
 <td>optional background texture in png format</td>
 </tr>
 <tr>
 <td>*</td>
 <td>fixes the display position of the % set by the button</td>
+</tr>
+</tbody>
+</table>
+<h2 id="frontpanel">FrontPanel</h2>
+<table>
+<thead>
+<tr>
+<th>front_panel</th>
+<th>library _hmi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latching =</td>
+<td>latching front_panel [0,1] [False,True]</td>
+</tr>
+<tr>
+<td>texture_name =</td>
+<td>foreground texture in png format</td>
+</tr>
+<tr>
+<td>texture2_name =</td>
+<td>optional background texture in png format</td>
 </tr>
 </tbody>
 </table>

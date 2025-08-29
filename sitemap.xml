@@ -8,6 +8,13 @@
         <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
     </url>
     <url>
+        <loc>https://WRSimulator.github.io/documentation/axis_controller/</loc>
+        <lastmod>2025-08-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/axis_controller/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/axis_controller/"/>
+    </url>
+    <url>
         <loc>https://WRSimulator.github.io/documentation/errors/</loc>
         <lastmod>2025-08-29</lastmod>
         <changefreq>daily</changefreq>
@@ -76,6 +83,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/"/>
+    </url>
+    <url>
+        <loc>https://WRSimulator.github.io/documentation/fr/axis_controller/</loc>
+        <lastmod>2025-08-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://WRSimulator.github.io/documentation/fr/axis_controller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://WRSimulator.github.io/documentation/axis_controller/"/>
     </url>
     <url>
         <loc>https://WRSimulator.github.io/documentation/fr/errors/</loc>
