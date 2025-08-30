@@ -476,9 +476,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#description-rapide" class="md-nav__link">
+  <a href="#quick-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Description rapide
+      Quick description
     </span>
   </a>
   
@@ -499,9 +499,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#axis-controller-parameters" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Axis controller parameters
+      Parameters
     </span>
   </a>
   
@@ -601,9 +601,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#description-rapide" class="md-nav__link">
+  <a href="#quick-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Description rapide
+      Quick description
     </span>
   </a>
   
@@ -624,9 +624,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#axis-controller-parameters" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Axis controller parameters
+      Parameters
     </span>
   </a>
   
@@ -652,23 +652,24 @@
 
 <h1 id="axis-controller">Axis controller</h1>
 <h2 id="preambule">Preambule</h2>
-<p>WRsimulateur permet d'insérer des contrôleurs d'axe dans les folios. </p>
-<p>L'exemple <strong>us43-demo_controller_axis_CODESYS.xrs</strong> illustre la mise en œuvre d'un contrôleur d'axe <strong>IAI-SCON2</strong> pour contrôler le positionnement dune table élévatrice.</p>
+<p>WRSimulator allows the insertion of axis controllers into folios. The simulated axis controller provides a limited emulation of the IAI SCONS2 axis controller. (<a href="../assets/SCON2-CE0401-1.1A.pdf">SCON2-CE0401-1.1A.pdf</a>)</p>
+<p>The example <strong>us43-demo_controller_axis_CODESYS.xrs</strong> demonstrates the implementation of an <strong>IAI-SCON2</strong>  axis controller for controlling the positioning of a lifting table.</p>
 <h3 id="codesys-axis-controller-simulation">CODESYS axis controller simulation</h3>
 <p><img alt="" src="../assets/axis_controller.png" /></p>
-<h3 id="description-rapide">Description rapide</h3>
+<h3 id="quick-description">Quick description</h3>
 <ul>
-<li>L'automate virtuel CODESYS ControlWin 64 est connecté au contrôleur d'axe  simulé par WRSimulateur via Modbus TCP-IP.</li>
-<li>L'interaction entre l'automate et le contrôleur passe par une table d'échange qui comprend 5 mots. (%QW5.0 à %QW5.2 et %IW5.0 à %IW5.1 dans l'exemple)</li>
-<li>Le programme du projet <strong>us43-demo_controller_axis_CODESYS.project</strong> ajuste les bits de contrôle du registre <strong>axis_ctrl</strong> du contrôleur selon l'état des boutons connectés à ses entrées.</li>
-<li>La vitesse et le point de consigne sont imposés par le programme (lignes 9 et 10 du programme ci-dessous)</li>
-<li>On peut tester le comportement du positionnement de la table mobile en forçant les valeurs des registres <strong>axis_setpoint</strong> et <strong>axis_speed</strong></li>
+<li>The CODESYS ControlWin 64 virtual PLC is connected to the axis controller simulated by WRSimulateur via Modbus TCP-IP</li>
+<li>The interaction between the PLC and the controller is handled through an exchange table consisting of 5 words (e.g., %QW5.0 to %QW5.2 and %IW5.0 to %IW5.1 in this example).</li>
+<li>The program in the project  <strong>us43-demo_controller_axis_CODESYS.project</strong> adjusts the control bits of the <strong>axis_ctrl</strong> register in the controller based on the state of the buttons connected to its inputs.</li>
+<li>The speed and setpoint are set by the program (lines 9 and 10 of the program below).</li>
+<li>You can test the behavior of the mobile table positioning by forcing values in the <strong>axis_setpoint</strong> and <strong>axis_speed</strong> registers.</li>
+<li>The axis controller includes a PID position control loop. The PID gains (Kp, Ki, Kd) are tunable via the Kp, Ki, and Kd buttons.</li>
+<li>The axis position can be visualized on the plotter (grapher module) using the <strong>axis_position</strong>.</li>
 </ul>
 <h3 id="codesys-axis-controller-program">CODESYS axis controller program</h3>
 <p><img alt="" src="../assets/axis_controller_CODESYS.png" /></p>
-<h2 id="axis-controller-parameters">Axis controller parameters</h2>
-<p><a href="../assets/SCON2-CE0401-1.1A.pdf">SCON2-CE0401-1.1A.pdf</a></p>
-<p>Les adresses des mots API utilisés dans les tableaux suivants sont donnés à titre d'exemple. Il est possible de choisir des adresses différentes dans la cartographie de l'API virtuel:</p>
+<h2 id="parameters">Parameters</h2>
+<p>The addresses of the PLC words used in the tables below are provided as examples. Different addresses can be selected in the virtual PLC mapping.</p>
 <p><img alt="" src="fr/media/modbus_modules.png" /></p>
 <table>
 <thead>
