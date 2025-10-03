@@ -744,7 +744,7 @@ Le symbole '<strong>#</strong>' indique au simulateur que le nouveau symbole 'ca
 <li>Placer le symbole '<strong>electrovanne</strong>' de la famille '<strong>_Bobines'</strong> sur le folio.</li>
 <li>Modifier le symbole comme dit aux points 2.3 et 4 de l'exemple 1.</li>
 <li>Sauver le symbole dans la bibliothèque ''<strong>_Bobines</strong> en le nommant '<strong>electrovanne #1</strong>'.</li>
-<li>Ouvrir le schéma '<strong>wrs-on-symbols.xrs'</strong> dans WinRelais. Sélectionner de préférence le folio '_bobines' .</li>
+<li>Ouvrir le schéma '<strong>wrs-on-symbols.xrs'</strong> dans WinRelais. Pour des raisons d'organisation, sélectionner de préférence le folio '_bobines' .</li>
 <li>Placer le symbole fraichement enregistré '<strong>electrovanne #1</strong>' sur le folio.</li>
 <li>Aller dans Modifier un symbole\Avancé\Exécuter WinSymbole.</li>
 <li>Modifier le symbole à sa convenance dans WinSymbole. Enregistrer la modification (Ctrl-S).</li>
@@ -762,7 +762,7 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 <li>Sauver le symbole dans la bibliothèque ''<strong>_Bobines</strong> en le nommant '<strong>electrovanne #2</strong>'.</li>
 <li>Accéder à la texture 'electrovanne.png' présente dans le dossier :\
    <strong>C:\Users\Public\Documents\Elec-CAO\wrs-data\sym_textures\_Bobines\Electrovanne.png</strong></li>
-<li>Copier dans le même dossier la texture renomme en '<strong>electrovanne#2.png'</strong></li>
+<li>Copier dans le même dossier la texture renommée en '<strong>electrovanne#2.png'</strong></li>
 <li>Editer la texture '<strong>electrovanne#2.png'</strong> dans un logiciel adéquat, (GIMP par exemple) selon les besoins, puis enregistrer. (commande 'Ecraser electrovanne#2.png' avec GIMP)</li>
 </ol>
 <p><img alt="" src="../media/12345_exemple3.png" /></p>
@@ -965,6 +965,10 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 <td>retard_diff  =</td>
 <td>retard intentionnel du DDR [0 à 10000 ms]</td>
 </tr>
+<tr>
+<td>etat_initial =</td>
+<td>état fermé/ouvert du composant au lancement de la simulation (défaut = 1) [1, 0]</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -987,6 +991,10 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 <td>type =</td>
 <td>type de cartouche [aM, gG]</td>
 </tr>
+<tr>
+<td>etat_initial =</td>
+<td>état fermé/ouvert du composant au lancement de la simulation (défaut = 1) [1, 0]</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -1000,6 +1008,36 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 <tr>
 <td>ith  =</td>
 <td>seuil thermique [0.1 à 100 A]</td>
+</tr>
+<tr>
+<td>retard  =</td>
+<td>retard intentionnel [0 à 10000 ms]</td>
+</tr>
+<tr>
+<td>etat_initial =</td>
+<td>état fermé/ouvert du composant au lancement de la simulation (défaut = 1) [1, 0]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Relais magnétique</th>
+<th>bibliothèque _relais_magnetiques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>imag  =</td>
+<td>seuil magnétique [1 à 1000 A]</td>
+</tr>
+<tr>
+<td>retard  =</td>
+<td>retard intentionnel [0 à 10000 ms]</td>
+</tr>
+<tr>
+<td>etat_initial =</td>
+<td>état fermé/ouvert du composant au lancement de la simulation (défaut = 1) [1, 0]</td>
 </tr>
 </tbody>
 </table>
