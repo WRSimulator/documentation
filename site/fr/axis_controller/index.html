@@ -467,27 +467,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#demo-axe_numerique" class="md-nav__link">
+  <a href="#simulation-controleur-daxe-codesys" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo axe_numérique
+      Simulation contrôleur d'axe CODESYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#description-rapide" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
-      Description rapide
+      Description
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#programme-codesys-axe_numerique" class="md-nav__link">
+  <a href="#programme-contoleur-daxe-codesys" class="md-nav__link">
     <span class="md-ellipsis">
-      Programme CODESYS axe_numérique
+      Programme contôleur d'axe CODESYS
     </span>
   </a>
   
@@ -499,9 +499,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametres-iai" class="md-nav__link">
+  <a href="#parametres" class="md-nav__link">
     <span class="md-ellipsis">
-      Paramètres IAI
+      Paramètres
     </span>
   </a>
   
@@ -592,27 +592,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#demo-axe_numerique" class="md-nav__link">
+  <a href="#simulation-controleur-daxe-codesys" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo axe_numérique
+      Simulation contrôleur d'axe CODESYS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#description-rapide" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
-      Description rapide
+      Description
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#programme-codesys-axe_numerique" class="md-nav__link">
+  <a href="#programme-contoleur-daxe-codesys" class="md-nav__link">
     <span class="md-ellipsis">
-      Programme CODESYS axe_numérique
+      Programme contôleur d'axe CODESYS
     </span>
   </a>
   
@@ -624,9 +624,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametres-iai" class="md-nav__link">
+  <a href="#parametres" class="md-nav__link">
     <span class="md-ellipsis">
-      Paramètres IAI
+      Paramètres
     </span>
   </a>
   
@@ -652,22 +652,23 @@
 
 <h1 id="controleur-daxe">Contrôleur d'axe</h1>
 <h2 id="preambule">Préambule</h2>
-<p>WRsimulateur permet d'insérer des contrôleurs d'axe dans les folios. </p>
-<p>L'exemple <strong>43-demo_axe_numerique_CODESYS.xrs</strong> illustre la mise en œuvre d'un contrôleur d'axe <strong>IAI-SCON2</strong> pour contrôler le positionnement dune table élévatrice.</p>
-<h3 id="demo-axe_numerique">Demo axe_numérique</h3>
+<p>WRsimulateur permet d'insérer des contrôleurs d'axe dans les folios. le controleur d'axe simulé est une implémentation partielle du contrôleur d'axe SCONS2 de la société IAI. <a href="../../assets/SCON2-CE0401-1.1A.pdf">SCON2-CE0401-1.1A.pdf</a></p>
+<p>L'exemple <strong>43-demo_controleur_axe_CODESYS.xrs</strong> illustre la mise en œuvre d'un contrôleur d'axe <strong>IAI-SCON2</strong> pour contrôler le positionnement dune table élévatrice.</p>
+<h3 id="simulation-controleur-daxe-codesys">Simulation contrôleur d'axe CODESYS</h3>
 <p><img alt="" src="../../assets/axis_controller.png" /></p>
-<h3 id="description-rapide">Description rapide</h3>
+<h3 id="description">Description</h3>
 <ul>
 <li>L'automate virtuel CODESYS ControlWin 64 est connecté au contrôleur d'axe  simulé par WRSimulateur via Modbus TCP-IP.</li>
 <li>L'interaction entre l'automate et le contrôleur passe par une table d'échange qui comprend 5 mots. (%QW5.0 à %QW5.2 et %IW5.0 à %IW5.1 dans l'exemple)</li>
-<li>Le programme du projet <strong>43-demo_axe_numerique_CODESYS.project</strong> ajuste les bits de contrôle du registre <strong>axis_ctrl</strong> du contrôleur selon l'état des boutons connectés à ses entrées.</li>
+<li>Le programme du projet <strong>43-demo_controleur_axe_CODESYS.project</strong> ajuste les bits de contrôle du registre <strong>axis_ctrl</strong> du contrôleur selon l'état des boutons connectés à ses entrées.</li>
 <li>La vitesse et le point de consigne sont imposés par le programme (lignes 9 et 10 du programme ci-dessous)</li>
 <li>On peut tester le comportement du positionnement de la table mobile en forçant les valeurs des registres <strong>axis_setpoint</strong> et <strong>axis_speed</strong></li>
+<li>Le contrôleur d'axe intègre un asservissement de position PID. Les paramètre Proportionnel, Intégral et Dérivé sont ajustables avec les boutons Kp, Ki et Kd.</li>
+<li>On peut observer avec le grapheur la  position de l'axe en utilisant la variable spécifique <strong>axis_position</strong>.</li>
 </ul>
-<h3 id="programme-codesys-axe_numerique">Programme CODESYS axe_numérique</h3>
+<h3 id="programme-contoleur-daxe-codesys">Programme contôleur d'axe CODESYS</h3>
 <p><img alt="" src="../../assets/axis_controller_CODESYS.png" /></p>
-<h2 id="parametres-iai">Paramètres IAI</h2>
-<p><a href="../../assets/SCON2-CE0401-1.1A.pdf">SCON2-CE0401-1.1A.pdf</a></p>
+<h2 id="parametres">Paramètres</h2>
 <p>Les adresses des mots API utilisés dans les tableaux suivants sont donnés à titre d'exemple. Il est possible de choisir des adresses différentes dans la cartographie de l'API virtuel:</p>
 <p><img alt="" src="../media/modbus_modules.png" /></p>
 <table>

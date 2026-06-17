@@ -141,7 +141,7 @@ Files :
 
 [Use CODESYS with the simulator](assets/CODESYS_LAUNCH.mp4)
 
-### Preparation side Simulateur
+### Preparation side Simulator
 
 - The diagram implements : 
     - three analog inputs:
@@ -193,7 +193,7 @@ Files :
 
 [Use CODESYS with the simulator](assets/CODESYS_LAUNCH.mp4)
 
-### Preparation side Simulateur
+### Preparation side Simulator
 ![](en/media/tri_codesys.png)
 
 ### Preparation side  **CODESYS**

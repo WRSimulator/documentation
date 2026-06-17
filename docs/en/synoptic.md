@@ -16,8 +16,8 @@ Two types of objects are used by the physical motor:
 
 ![](media/image43.png)![](media/image42.png)
 
-|shape|library|Physics|
-| ---------------| ----------------------------------------------------------------------------------------|
+|shape|library \\_physics|
+| ---------------| ----------------------------------------------------|
 |dynamic =| True -\> object is of type 'physical', False -\> object is of type 'kinematic'|
 |masse =| mass in kg of the physical object \[1 to 100 kg]|
 |friction =| coefficient of friction \[0 to 100\] applied to the physical object|
@@ -27,19 +27,21 @@ Two types of objects are used by the physical motor:
 - if **dynamics** = False, parameters **mass** and **friction** are ignored.
 
 ##Kinematic object settings
-|kinematic|library|_Synoptic|
-| ---------------| ----------------------------------------------------------------------------------------|
+|kinematic|library \\_synoptic|
+| ---------------| -----------------------------------------|
 |parent =|designates a parent that can only be a sliding link|
 |id_collision =| * (default value)|
 |texture_name =|name of the image that can be applied to the object ( **png** format only)|
 |show =|True (False or True) show/hide object|
+
 - A kinematic object can be attached to a sliding link.
 - The **show** parameter allows the use of invisible 'walls'.
 
 ## Detector and limit switch
 Detects physical and kinematic objects that enter the sensor/end-of-travel detection zone
 - A sensor is a specialized kinematic object available in the **_Synoptique** library.
-|sensor|library|_Synoptic|
+
+|sensor|library \\_synoptic|
 |-----------|--------------------------------------|
 |parent =| designates a parent that can only be a sliding link|
 |id_collision =| * (default value, detects all objects present in the detection zone)|
@@ -55,6 +57,7 @@ Detects physical and kinematic objects that enter the sensor/end-of-travel detec
 |sensor A detects only object P2|
 |sensor * detects objects P1, P2 and P3|
 |sensor B detects only object P3|
+
 - A sensor's detection zone is defined by a **magenta (255,0,255)** color contour.
   (255,0,255) . For example :
   ![](media/detect_zone.png) 
@@ -70,17 +73,17 @@ The texture silhouette automatically defines the object's collision shape.
     - The physics engine uses the transparent part of the texture to delimit the collision shape in the form of a **convex** polygon, as shown below:
 ![](media/texture_variant1.png)
 
-- Drawing constraint in **WinSymbol**.
+- Drawing constraint in **WinSymbol** (barycenter)
 ![](media/barycentre.png)
 
 ## Slider links
-Slider links are available in the **\_Synoptique** library and are prefixed with the slider keyword:
+Slider links are available in the **\_Synoptic** library and are prefixed with the slider keyword:
 ![](media/slider1.png)
 
 - Description of slider parameters:
 
-|slider |library|_Synoptic|
-| ---------------| ----------------------------------------------------------------------------------------|
+|slider |library \\_synoptic|
+| ---------------| -----------|
 |control_direction =| designates the motor object used to control the mobile in direction|
 |speed_control =| designates the motor object used to control the mobile in speed|
 |speed =|speed in % of motor speed (transcribed as linear speed). \[0 to 100%\]|
@@ -88,6 +91,7 @@ Slider links are available in the **\_Synoptique** library and are prefixed with
 |id_collision =| * (default value, detects any object that collides)|
 |parent =| designates a parent which can only be another sliding link|
 |texture_name =| name of the texture that can be applied to the mobile|
+|zorder =| texture appearance order in case of overlap [0 to 15] (0 by default)|
 
 - Elements of a sliding connection that can be edited in WinSymbol :
 - These elements are differentiated in WinSymbol by specific colors:
@@ -105,7 +109,7 @@ A cylinder is a specialized sliding link.
 
 ![](media/cylinder1.png)
 
-|VerinSE, VerinDE|library \_Verins|
+|SingleActingCylinder, DoubleActingCylinder|library \\_cylinders|
 | ---------------| ---------------------------------------------------------------------|
 |pressure =|nominal pressure [0 to 10 bar]|
 |speed =|speed coefficient of rod movement [0 to 100%]|
@@ -122,7 +126,7 @@ Identical to the cylinder component, except that it can be attached to a sliding
     - two **Label_Pression** objects for double-acting cylinders.
   - The names of **Label_Pression** objects are used in the **float_inputs** (or **float_input**) parameter to connect cylinder ports.
 
-|VerinDE_flottant |  library \_Verins |
+|float_DoubleActingCylinder|  library \\_cylinders |
 | ---------------| ---------------------------------------------------------------------|
 |float_inputs = |(Label_Pression orifice 1, Label_Pression orifice 2)|
 |parent =| designates a parent which may be just another slide link|
@@ -131,7 +135,7 @@ Identical to the cylinder component, except that it can be attached to a sliding
 |id_collision =| * (default value, detects any object colliding with it)|
 |texture_name =| name of the texture that can be applied to the rod|
 
-| VerinSE_flottant | library \_Verins |
+| float_SingleActingCylinder | library \\_cylinders |
 | ---------------| ---------------------------------------------------------------------|
 |float_input = |Label_Pression orifice 1|
 |parent =| designates a parent which may be just another slide link.
@@ -152,7 +156,7 @@ Top-view conveyors are available in the **\_Synoptique** library and are prefixe
 ![](media/conveyor_top.png)
 
 
-|conveyor | library \\_Synoptic|
+|conveyor | library \\_synoptic|
 | ---------------| ---------------------------------------------------------------------|
 |controle_direction =|motor object used to control conveyor diection|
 |control_speed =|motor object used to control speed|
@@ -166,7 +170,7 @@ Top-view conveyors are available in the **\_Synoptique** library and are prefixe
 Side-view conveyors are available in the **\_Synoptique** library and are prefixed with the **side_conveyor** keyword:
 ![](media/conveyor_side.png)
 
-|side_conveyor|library \\_Synoptic|
+|side_conveyor|library \\_synoptic|
 | ---------------| ---------------------------------------------------------------------|
 |control_direction =|motor object used to control conveyor diection|
 |speed_control =|motor object used to control speed|
@@ -185,7 +189,7 @@ Specialized synoptic object used to distribute a physical object in the scene at
 
 ![](media/dispenser1.png)
 
-|dispenser|library \\_Synoptic|
+|dispenser|library \\_synoptic|
 | ---------------| ---------------------------------------------------------------------|
 |id_collision =| * (default value)|
 |parent =| designates a parent that can only be a sliding link|

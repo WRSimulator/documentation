@@ -21,7 +21,7 @@
 - Les charges mécaniques appliquées aux actionneurs (vérins, moteurs) sont fixes. Elles correspondent au point de fonctionnement nominal des actionneurs.
 - Les transitoires des courants et des tensions ne sont pas simulées.
 - La fréquence maximale d'acquisition des appareils de mesure est limitée à 50Hz (1 mesure toutes les 20 ms).
-- Les mesures sont données en valeur efficace ou moyenne uniquement.
+- Les mesures sont données uniquement en valeur efficace ou moyenne.
 
 ### Edition des schémas
 
@@ -45,19 +45,19 @@ Certaines fonctionnalités graphiques proposées par WinSymbole ne sont pas pris
 
 ### Anomalie d'édition d'un symbole
 
-- ![](fr/media/image3.png)![](fr/media/image4.png)
+- ![](media/image3.png)![](media/image4.png)
 - Il peut arriver qu'un décalage de la texture et de la forme de collision survienne suite à la rotation d'un symbole dans WinRelais. Il est alors nécessaire de recentrer
-  l'origine du symbole dans WinSymbole. (Voir **page 17** sur la question du barycentre)
+  l'origine du symbole dans WinSymbole. (mot-clé de recherche =  barycentre)
 - Il est préférable de mener la rotation plutôt dans WinSymbole, d'ajuster avec soin le barycentre puis de sauver le symbole pour réutilisation.
 
 
 ## Blocs de configuration généraux
 
-![](fr/media/image38.png)
+![](media/image38.png)
 
 Ce bloc ajuste certains détails d'affichage du folio courant, il est essentiellement utilisé à des fins de mise au point :
 
-![](fr/media/image39.png)
+![](media/image39.png)
 
 - **collisions** = (False/True) : visualise les formes de collision des objets physiques,
 - **sensors_collisions** = (False/True) : visualise les formes de collision des détecteurs et des fins de course,
@@ -65,7 +65,7 @@ Ce bloc ajuste certains détails d'affichage du folio courant, il est essentiel
 - **wr_equips** = (False/True) : visualise les numéros des équipotentiels définis dans WinRelais,
 - **terminals_nums** = (False/True) : visualise les numéros de bornes des appareils.
 
-![](fr/media/image40.png)
+![](media/image40.png)
 
 Les blocs **World_Settings** définissent le comportement du moteur physique 2D. Il est possible d'ajuster le moteur en :
 

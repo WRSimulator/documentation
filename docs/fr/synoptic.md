@@ -77,7 +77,7 @@ La silhouette de la texture permet de définir automatiquement la forme de colli
     - Le moteur physique utilise la partie transparente de la texture pour délimiter la forme de collision sous la forme d'un polygone **convexe** comme montré ci-dessous :
 ![](fr/media/texture_variant1.png)
 
-- Contrainte de dessin dans **WinSymbole**
+- Contrainte de dessin dans **WinSymbole** (barycentre)
 ![](fr/media/barycentre.png)
 
 ## Liaison glissière (slider)
@@ -87,14 +87,15 @@ Les liaisons glissières sont disponibles dans la bibliothèque **\_Synoptique**
 - Description des paramètres d'un slider :
 
 |slider |bibliothèque \\_Synoptique|
-| ---------------| ----------------------------------------------------------------------------------------|
+| ---------------| -----------------------------|
 |controle_direction  =| désigne l'objet moteur utilisé pour contrôler le mobile en direction|
 |controle_vitesse  =| désigne l'objet moteur utilisé pour contrôler le mobile en vitesse|
 |vitesse  =|vitesse en % de la vitesse du moteur (transcrite en vitesse linéaire). \[0 à100%\]|
 |friction  =|fixe la friction de la surface du mobile \[0 à 100%\]|
 |id_collision  =| * (valeur par défaut, détecte tout objet entrant en collision)|
 |parent  =| désigne un parent qui ne peut-être qu'une autre liaison glissière|
-|nom_texture  =| nom de la texture qui peut-être appliquée au mobile.|
+|nom_texture  =| nom de la texture qui peut-être appliquée au mobile|
+|zorder  =| ordre d'apparition de la texture en cas de superposition \[0 à 15\] (0 par défaut)|
 
 - Eléments constitutifs d'une liaison glissière éditables dans WinSymbole :
 

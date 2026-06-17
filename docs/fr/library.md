@@ -49,7 +49,7 @@ L'opération est plus longue que dans l'exemple précédent car il faut créer l
 1. Placer le symbole '**electrovanne**' de la famille '**\_Bobines'** sur le folio.
 2. Modifier le symbole comme dit aux points 2.3 et 4 de l'exemple 1.
 3. Sauver le symbole dans la bibliothèque ''**\_Bobines** en le nommant '**electrovanne #1**'.
-4. Ouvrir le schéma '**wrs-on-symbols.xrs'** dans WinRelais. Sélectionner de préférence le folio '\_bobines' .
+4. Ouvrir le schéma '**wrs-on-symbols.xrs'** dans WinRelais. Pour des raisons d'organisation, sélectionner de préférence le folio '\_bobines' .
 5. Placer le symbole fraichement enregistré '**electrovanne #1**' sur le folio.
 6. Aller dans Modifier un symbole\\Avancé\\Exécuter WinSymbole.
 7. Modifier le symbole à sa convenance dans WinSymbole. Enregistrer la modification (Ctrl-S).
@@ -70,7 +70,7 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 2. Sauver le symbole dans la bibliothèque ''**\_Bobines** en le nommant '**electrovanne #2**'.
 3. Accéder à la texture 'electrovanne.png' présente dans le dossier :\
    **C:\\Users\\Public\\Documents\\Elec-CAO\\wrs-data\\sym_textures\\\_Bobines\\Electrovanne.png**
-4. Copier dans le même dossier la texture renomme en '**electrovanne#2.png'**
+4. Copier dans le même dossier la texture renommée en '**electrovanne#2.png'**
 5. Editer la texture '**electrovanne#2.png'** dans un logiciel adéquat, (GIMP par exemple) selon les besoins, puis enregistrer. (commande 'Ecraser electrovanne#2.png' avec GIMP)
 
 ![](fr/media/12345_exemple3.png)
@@ -134,21 +134,31 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 |courbe  = |courbe de déclenchement \[B, C, D\]|
 |idn  = |sensibilité du différentiel \[10 à 10000 mA\]|
 |retard_diff  = |retard intentionnel du DDR \[0 à 10000 ms\]|
+|etat_initial = |état fermé/ouvert du composant au lancement de la simulation (défaut = 1) \[1, 0]|
 
 |Fusible     | bibliothèque \_sectionneurs_porte_fusibles         |
 | -------------------------------------------------- |---|
 |In  = |calibre fusible \[0.5 à 100 A\]|
 |retard  = |retard intentionnel \[0 à 10000 ms\]|
 |type = |type de cartouche \[aM, gG\]|
+|etat_initial = |état fermé/ouvert du composant au lancement de la simulation (défaut = 1) \[1, 0]|
 
 | Relais thermique     |  bibliothèque \_relais_thermiques        |
 | -------------------------------------------------- |---|
 |ith  = |seuil thermique \[0.1 à 100 A\]|
+|retard  = |retard intentionnel \[0 à 10000 ms\]|
+|etat_initial = |état fermé/ouvert du composant au lancement de la simulation (défaut = 1) \[1, 0]|
+
+| Relais magnétique     |  bibliothèque \_relais_magnetiques        |
+| -------------------------------------------------- |---|
+|imag  = |seuil magnétique \[1 à 1000 A\]|
+|retard  = |retard intentionnel \[0 à 10000 ms\]|
+|etat_initial = |état fermé/ouvert du composant au lancement de la simulation (défaut = 1) \[1, 0]|
 
 | Moteur alternatif     | bibliothèque \_moteurs_alternatifs|
 | -------------------------------------------------- |-------------|
 |Pu  = |puissance utile moteur \[90 W à 22 kW\]|
-|nm  = |vitesse nominale moteur \[740 à 3000 rpm\]|
+|nm  = |vitesse nominale moteur \[740 à 3000 rpm\] ou \[-740 à -3000 rpm\]|
 |cos = |cos(phi) moteur \[0.5 à 1\]|
 |rendement  = |rendement moteur \[0.5 à 1\]|
 |venroulement  = |tension nominale aux bornes d'un enroulement \[127 à 400 V\]|
@@ -157,7 +167,7 @@ Le visuel de l'objet 'electrovanne' initial manipulé précédemment est constru
 | Moteur continu     | bibliothèque \_moteurs_continus|
 | -------------------------------------------------- |---|
 |pu  = |puissance utile moteur \[90 W à 22 kW\]|
-|nm  = |vitesse nominale moteur \[740 à 3000 rpm\]|
+|nm  = |vitesse nominale moteur \[740 à 3000 rpm\] ou \[-740 à -3000 rpm\]|
 |vinduit  = |tension d'induit \[12 à 320 V\]|
 |rendement  = |rendement moteur \[0.5 à 1\]|
 

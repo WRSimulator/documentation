@@ -1,73 +1,55 @@
 # Axis controller
 
-## Preamble
-WRsimulator can be used to insert variable speed drives into folios. The library currently includes SchneiderElectric ATV31 single-phase and three-phase drive objects.
+## Preambule
+WRSimulator allows the insertion of axis controllers into folios. The simulated axis controller provides a limited emulation of the IAI SCONS2 axis controller. ([SCON2-CE0401-1.1A.pdf](assets/SCON2-CE0401-1.1A.pdf))
 
-Example **us18 - demo_Speed_Drive_ATV31_1ph_2C.xrs** illustrates the use of an ATV31 drive to control the speed of a moving table.
-![](media/speed_atv31.png)
-- the drive is attached to a text zone edited in WinRelais, which specifies its parameters,
-- The first line of the text zone must begin with the command :
-    - **parent =** drive name,
-- This text zone can be placed anywhere in the diagram,
-- If the text field does not exist, the drive is set to default parameters.
+The example **us43-demo_controller_axis_CODESYS.xrs** demonstrates the implementation of an **IAI-SCON2**  axis controller for controlling the positioning of a lifting table.
 
-## ATV31 settings
+### CODESYS axis controller simulation
+![](assets/axis_controller.png)
 
-[Schneider-Altivar-31-Programming.pdf](assets/Schneider-Altivar-31-Programming.pdf)
+### Quick description
 
-|Default settings |Description |
+
+- The CODESYS ControlWin 64 virtual PLC is connected to the axis controller simulated by WRSimulateur via Modbus TCP-IP
+- The interaction between the PLC and the controller is handled through an exchange table consisting of 5 words (e.g., %QW5.0 to %QW5.2 and %IW5.0 to %IW5.1 in this example).
+- The program in the project  **us43-demo_controller_axis_CODESYS.project** adjusts the control bits of the **axis_ctrl** register in the controller based on the state of the buttons connected to its inputs.
+- The speed and setpoint are set by the program (lines 9 and 10 of the program below).
+- You can test the behavior of the mobile table positioning by forcing values in the **axis_setpoint** and **axis_speed** registers.
+- The axis controller includes a PID position control loop. The PID gains (Kp, Ki, Kd) are tunable via the Kp, Ki, and Kd buttons.
+- The axis position can be visualized on the plotter (grapher module) using the **axis_position**.
+
+### CODESYS axis controller program   
+![](assets/axis_controller_CODESYS.png)
+
+
+
+## Parameters
+
+The addresses of the PLC words used in the tables below are provided as examples. Different addresses can be selected in the virtual PLC mapping.
+
+![](media/modbus_modules.png)
+
+|Default parameter      |Description                    |
 | ------------------ | ------------ |
-|In = 10|Inverter calibration|
-|bFr = 50|Standard motor frequency [50,60]|
-|ItH = 10.0 |Motor thermal protection [0.2 to 1.5 In]|
-|CLI = 15.0 |Current limitation [0.25 to 1.5 In]|
-|ACC = 3.0 |Acceleration ramp time [0.1 to 3276 s]|
-|dEC = 3.0 |Deceleration ramp time [0.1 to 3276 s]|
-|LSP = 0 |Low speed [0 Hz to HSP]|
-|HSP = 50 |High speed [LSP to bFR]|
-|PS2 = n0 |2 preset speeds [n0,LI3,LI4,LI5,LI6]|
-|PS4 = n0 |4 preselected speeds [n0,LI3,LI4,LI5,LI6]|
-|PS8 = n0 |8 preselected speeds [n0,LI3,LI4,LI5,LI6]|
-|SP2 = 10 |Preset speed 2 [0 Hz to HSP]|
-|SP3 = 15 |Preset speed 3 [0 Hz to HSP]|
-|SP4 = 20 |Preset speed 4 [0 Hz to HSP]|
-|SP5 = 25 |Preset speed 5 [0 Hz to HSP]|
-|SP6 = 30 |Preset speed 6 [0 Hz to HSP]|
-|SP7 = 35 |Preset speed 7 [0 Hz to HSP]|
-|SP8 = 40 |Preset speed 8 [0 Hz to HSP]|
-|tCC = 2C |Control 2wire / 3wire [2C, 3C]|
-|tCt = trn |Control type 2wire [LEL, trn, PFO]|
-|r1 = FLt |Relay r1 [n0,FLt,rUn,FtA,FLA,CtA,SrA,tSA,APL,LI1,LI2,LI3,LI4,LI5,LI6]|
-|r2 = n0 |Relay r2 [n0,FLt,rUn,FtA,FLA,CtA,SrA,tSA,bLC,APL,LI1,LI2,LI3,LI4,LI5,LI6]|
-|FSt = n0 |Fast stop on logic 0 [n0, LI1, LI2, LI3, LI4, LI5, LI6]|
-|LAF = n0 |Forward limit switch [n0, LI1, LI2, LI3, LI4, LI5, LI6]|
-|LAr = n0 |Stroke end forward [n0, LI1, LI2, LI3, LI4, LI5,LI6]|
-|LAS = nSt |Stop type at end of stroke [rMP, FSt, nSt]|
-|FR1 = AII|Setpoint 1 configuration [AII, AI2, AI3]|
+|In = 10 A|Axis Controller caliber|
+|axis_ctrl = %QW5.0|Control bits|
+|axis_setpoint = %QW5.1 |Position setpoint |
+|axis_speed = %QW5.2 |Axis movement speed in %|
+|axis_status = %IW5.0 |Axis controller status|
+|axis_position = %IW5.1 |Axis position (%)|
+|home_point = 0 mm |Home position value (mm)|
+|max_position = 700 mm |Max position value (mm)|
 
-## ATV11 settings
-
-[ATV11_UserManual.pdf](assets/ATV11_UserManual.pdf)
-
-|default settings |Description |
+|axis_ctrl      |Bit descriptions                    |
 | ------------------ | ------------ |
-|In = 10|Inverter calibration|
-|bFr = 50|Standard motor frequency [50,60\]|
-|ItH = 10.0 |Motor thermal protection [0.2 to 1.5 In]|
-|CLI = 15.0 |Current limitation [0.25 to 1.5 In]|
-|ACC = 3.0 |Acceleration ramp time [0.1 to 3276 s]|
-|dEC = 3.0 |Deceleration ramp time [0.1 to 3276 s]|
-|LSP = 0 |Low speed [0 Hz to HSP]|
-|HSP = 50 |High speed [LSP to bFR]|
-|SP2 = 10 |Preset speed 2 [0 Hz to HSP]|
-|SP3 = 25 |Preset speed 3 [0 Hz to HSP]|
-|SP4 = 50 |Preset speed 4 [0 Hz to HSP]|
-|Alt = 5U| Analog input configuration [5U, 10U, 0A, 4A]|
-|ACt = 2C|2-wire / 3-wire control [2C, 3C]|
-|tCt = trn | 2-wire control type [LEL, trn, PFO]|
-|rrS = n0|Rear direction [n0,LII,LI2,LI3,LI4]|
-|LIA = n0|LIA input assignment [n0,LII,LI2,LI3,LI4]|
-|LIb = n0|Input assignment LIb [n0,LII,LI2,LI3,LI4]|
-|dO = n0|[n0, 0Cr, rFr, FtA, SrA CtA]|
-|Ftd = 50|Threshold frequency (0 to 200 Hz)|
-|Ctd = 10|Current threshold [0 to 1.5 In]|
+|set servo (%QW5_0.0)|Enables the axis controller operation [False,True]|
+|stop move (%QW5_0.1)|Stop motion request [False,True]|
+|goto home (%QW5_0.2)|Requests return to home position [False,True]|
+|goto setpoint (%QW5_0.3)|Requests positioning to setpoint [False,True]|
+|raz default (%QW5_0.4)|Requests fault reset (overload) [False,True]|
+
+|axis_status      |Bit descriptions                 |
+| ------------------ | ------------ |
+|setpoint_reached (%IW5.0)| Setpoint position reached [False,True]|
+|homepoint_reached (%IW5.1)| Home position reached [False,True]|

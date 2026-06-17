@@ -776,49 +776,137 @@ Two types of objects are used by the physical motor:
 - kinematic objects, whose positions in the scene are controlled directly by the program. They are insensitive to external forces and therefore not subject to the laws of physics. Physical objects can collide with kinematic objects.</p>
 <h2 id="physical-object-settings">Physical object settings</h2>
 <p><img alt="" src="../media/image43.png" /><img alt="" src="../media/image42.png" /></p>
-<p>|shape|library|Physics|
-| ---------------| ----------------------------------------------------------------------------------------|
-|dynamic =| True -&gt; object is of type 'physical', False -&gt; object is of type 'kinematic'|
-|masse =| mass in kg of the physical object [1 to 100 kg]|
-|friction =| coefficient of friction [0 to 100] applied to the physical object|
-|pas_de_rotation =| applies a considerable mass and inertia value to the physical object|
-|id_collision =| * (default value)|
-|texture_name =|image name ( <strong>png</strong> format only)|
-- if <strong>dynamics</strong> = False, parameters <strong>mass</strong> and <strong>friction</strong> are ignored.</p>
+<table>
+<thead>
+<tr>
+<th>shape</th>
+<th>library \_physics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dynamic =</td>
+<td>True -&gt; object is of type 'physical', False -&gt; object is of type 'kinematic'</td>
+</tr>
+<tr>
+<td>masse =</td>
+<td>mass in kg of the physical object [1 to 100 kg]</td>
+</tr>
+<tr>
+<td>friction =</td>
+<td>coefficient of friction [0 to 100] applied to the physical object</td>
+</tr>
+<tr>
+<td>pas_de_rotation =</td>
+<td>applies a considerable mass and inertia value to the physical object</td>
+</tr>
+<tr>
+<td>id_collision =</td>
+<td>* (default value)</td>
+</tr>
+<tr>
+<td>texture_name =</td>
+<td>image name ( <strong>png</strong> format only)</td>
+</tr>
+<tr>
+<td>- if <strong>dynamics</strong> = False, parameters <strong>mass</strong> and <strong>friction</strong> are ignored.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="kinematic-object-settings">Kinematic object settings</h2>
-<p>|kinematic|library|_Synoptic|
-| ---------------| ----------------------------------------------------------------------------------------|
-|parent =|designates a parent that can only be a sliding link|
-|id_collision =| * (default value)|
-|texture_name =|name of the image that can be applied to the object ( <strong>png</strong> format only)|
-|show =|True (False or True) show/hide object|
-- A kinematic object can be attached to a sliding link.
-- The <strong>show</strong> parameter allows the use of invisible 'walls'.</p>
+<table>
+<thead>
+<tr>
+<th>kinematic</th>
+<th>library \_synoptic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent =</td>
+<td>designates a parent that can only be a sliding link</td>
+</tr>
+<tr>
+<td>id_collision =</td>
+<td>* (default value)</td>
+</tr>
+<tr>
+<td>texture_name =</td>
+<td>name of the image that can be applied to the object ( <strong>png</strong> format only)</td>
+</tr>
+<tr>
+<td>show =</td>
+<td>True (False or True) show/hide object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A kinematic object can be attached to a sliding link.</li>
+<li>The <strong>show</strong> parameter allows the use of invisible 'walls'.</li>
+</ul>
 <h2 id="detector-and-limit-switch">Detector and limit switch</h2>
 <p>Detects physical and kinematic objects that enter the sensor/end-of-travel detection zone
-- A sensor is a specialized kinematic object available in the <strong>_Synoptique</strong> library.
-|sensor|library|_Synoptic|
-|-----------|--------------------------------------|
-|parent =| designates a parent that can only be a sliding link|
-|id_collision =| * (default value, detects all objects present in the detection zone)|
-|texture_name =|name of the image that can be applied to the object ( <strong>png</strong> format only)|
-|<em> =|fixes the position of the indicator light (green square)|</em> =|fixes the position of the indicator light (green square)</p>
+- A sensor is a specialized kinematic object available in the <strong>_Synoptique</strong> library.</p>
+<table>
+<thead>
+<tr>
+<th>sensor</th>
+<th>library \_synoptic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent =</td>
+<td>designates a parent that can only be a sliding link</td>
+</tr>
+<tr>
+<td>id_collision =</td>
+<td>* (default value, detects all objects present in the detection zone)</td>
+</tr>
+<tr>
+<td>texture_name =</td>
+<td>name of the image that can be applied to the object ( <strong>png</strong> format only)</td>
+</tr>
+<tr>
+<td>* =</td>
+<td>fixes the position of the indicator light (green square)</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>A detector with id_collision = * detects all objects entering its detection zone.</li>
 <li>id_collision** is used to filter objects detected by a detector or limit switch component. For example :
   <img alt="" src="../media/image44.png" /></li>
 </ul>
-<p>|Collision Object Filtering|
-| ----------------------------------------------|
-|sensor A detects only object P2|
-|sensor * detects objects P1, P2 and P3|
-|sensor B detects only object P3|
-- A sensor's detection zone is defined by a <strong>magenta (255,0,255)</strong> color contour.
+<table>
+<thead>
+<tr>
+<th>Collision Object Filtering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sensor A detects only object P2</td>
+</tr>
+<tr>
+<td>sensor * detects objects P1, P2 and P3</td>
+</tr>
+<tr>
+<td>sensor B detects only object P3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>A sensor's detection zone is defined by a <strong>magenta (255,0,255)</strong> color contour.
   (255,0,255) . For example :
   <img alt="" src="../media/detect_zone.png" /> </p>
-<ul>
-<li>If a texture name is defined, the application searches for the texture (in <strong>png</strong> format only) in the folder
-  <strong>C:\Users\Public\Documents\Elec-CAO\wrs-data\textures</strong></li>
+</li>
+<li>
+<p>If a texture name is defined, the application searches for the texture (in <strong>png</strong> format only) in the folder
+  <strong>C:\Users\Public\Documents\Elec-CAO\wrs-data\textures</strong></p>
+</li>
 <li>If the texture name is not defined, or if the texture file is not found, a texture calculated by the program will be applied to the object using
 the outer edge coloured <strong>red</strong>. For example:
 <img alt="" src="../media/texture_variant.png" /></li>
@@ -827,24 +915,57 @@ the outer edge coloured <strong>red</strong>. For example:
     - The physics engine uses the transparent part of the texture to delimit the collision shape in the form of a <strong>convex</strong> polygon, as shown below:
 <img alt="" src="../media/texture_variant1.png" /></p>
 <ul>
-<li>Drawing constraint in <strong>WinSymbol</strong>.
+<li>Drawing constraint in <strong>WinSymbol</strong> (barycenter)
 <img alt="" src="../media/barycentre.png" /></li>
 </ul>
 <h2 id="slider-links">Slider links</h2>
-<p>Slider links are available in the <strong>_Synoptique</strong> library and are prefixed with the slider keyword:
+<p>Slider links are available in the <strong>_Synoptic</strong> library and are prefixed with the slider keyword:
 <img alt="" src="../media/slider1.png" /></p>
 <ul>
 <li>Description of slider parameters:</li>
 </ul>
-<p>|slider |library|_Synoptic|
-| ---------------| ----------------------------------------------------------------------------------------|
-|control_direction =| designates the motor object used to control the mobile in direction|
-|speed_control =| designates the motor object used to control the mobile in speed|
-|speed =|speed in % of motor speed (transcribed as linear speed). [0 to 100%]|
-|friction =|fixes the friction of the mobile surface [0 to 100%]|
-|id_collision =| * (default value, detects any object that collides)|
-|parent =| designates a parent which can only be another sliding link|
-|texture_name =| name of the texture that can be applied to the mobile|</p>
+<table>
+<thead>
+<tr>
+<th>slider</th>
+<th>library \_synoptic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>control_direction =</td>
+<td>designates the motor object used to control the mobile in direction</td>
+</tr>
+<tr>
+<td>speed_control =</td>
+<td>designates the motor object used to control the mobile in speed</td>
+</tr>
+<tr>
+<td>speed =</td>
+<td>speed in % of motor speed (transcribed as linear speed). [0 to 100%]</td>
+</tr>
+<tr>
+<td>friction =</td>
+<td>fixes the friction of the mobile surface [0 to 100%]</td>
+</tr>
+<tr>
+<td>id_collision =</td>
+<td>* (default value, detects any object that collides)</td>
+</tr>
+<tr>
+<td>parent =</td>
+<td>designates a parent which can only be another sliding link</td>
+</tr>
+<tr>
+<td>texture_name =</td>
+<td>name of the texture that can be applied to the mobile</td>
+</tr>
+<tr>
+<td>zorder =</td>
+<td>texture appearance order in case of overlap [0 to 15] (0 by default)</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Elements of a sliding connection that can be edited in WinSymbol :</li>
 <li>
@@ -865,8 +986,8 @@ the outer edge coloured <strong>red</strong>. For example:
 <table>
 <thead>
 <tr>
-<th>VerinSE, VerinDE</th>
-<th>library _Verins</th>
+<th>SingleActingCylinder, DoubleActingCylinder</th>
+<th>library \_cylinders</th>
 </tr>
 </thead>
 <tbody>
@@ -902,8 +1023,8 @@ the outer edge coloured <strong>red</strong>. For example:
 <table>
 <thead>
 <tr>
-<th>VerinDE_flottant</th>
-<th>library _Verins</th>
+<th>float_DoubleActingCylinder</th>
+<th>library \_cylinders</th>
 </tr>
 </thead>
 <tbody>
@@ -936,8 +1057,8 @@ the outer edge coloured <strong>red</strong>. For example:
 <table>
 <thead>
 <tr>
-<th>VerinSE_flottant</th>
-<th>library _Verins</th>
+<th>float_SingleActingCylinder</th>
+<th>library \_cylinders</th>
 </tr>
 </thead>
 <tbody>
@@ -972,7 +1093,7 @@ the outer edge coloured <strong>red</strong>. For example:
 <thead>
 <tr>
 <th>conveyor</th>
-<th>library \_Synoptic</th>
+<th>library \_synoptic</th>
 </tr>
 </thead>
 <tbody>
@@ -1013,7 +1134,7 @@ the outer edge coloured <strong>red</strong>. For example:
 <thead>
 <tr>
 <th>side_conveyor</th>
-<th>library \_Synoptic</th>
+<th>library \_synoptic</th>
 </tr>
 </thead>
 <tbody>
@@ -1057,7 +1178,7 @@ the outer edge coloured <strong>red</strong>. For example:
 <thead>
 <tr>
 <th>dispenser</th>
-<th>library \_Synoptic</th>
+<th>library \_synoptic</th>
 </tr>
 </thead>
 <tbody>

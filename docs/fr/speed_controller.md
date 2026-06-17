@@ -4,7 +4,7 @@
 WRsimulateur permet d'insérer des variateurs de vitesse dans les folios. La bibliothèque comprend actuellement des objets variateurs monophasés et triphasés type ATV31 de SchneiderElectric.
 
 L'exemple **18-demo_variateurATV31** illustre une mise en œuvre d'un variateur ATV31 pour contrôler la vitesse de déplacement dune table mobile.
-![](fr/media/speed_atv31.png)
+![](media/speed_atv31.png)
 
 - le variateur est attaché à une une zone texte éditée dans WinRelais qui précise son paramétrage,
 - Il faut que la première ligne de la zone de texte commence avec la commande :

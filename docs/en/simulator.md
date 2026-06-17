@@ -46,7 +46,7 @@ Some of the graphical features offered by WinSymbol are not taken into account b
 
 - ![](media/image3.png)![](media/image4.png)
 - Occasionally, when a symbol is rotated in WinRelais, the collision texture and shape may shift. In this case, it is necessary to re-center the symbol's origin in WinSymbol.
-  the symbol origin in WinSymbol (see **page 17** on the question of the barycentre).
+  the symbol origin in WinSymbol (search keyword =  barycenter).
 - It is preferable to carry out the rotation in WinSymbol, carefully adjust the barycenter and then save the symbol for reuse.
 
 

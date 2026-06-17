@@ -1,33 +1,34 @@
 # Contrôleur d'axe
 
 ## Préambule
-WRsimulateur permet d'insérer des contrôleurs d'axe dans les folios. 
+WRsimulateur permet d'insérer des contrôleurs d'axe dans les folios. le controleur d'axe simulé est une implémentation partielle du contrôleur d'axe SCONS2 de la société IAI. [SCON2-CE0401-1.1A.pdf](assets/SCON2-CE0401-1.1A.pdf)
 
-L'exemple **43-demo_axe_numerique_CODESYS.xrs** illustre la mise en œuvre d'un contrôleur d'axe **IAI-SCON2** pour contrôler le positionnement dune table élévatrice.
+L'exemple **43-demo_controleur_axe_CODESYS.xrs** illustre la mise en œuvre d'un contrôleur d'axe **IAI-SCON2** pour contrôler le positionnement dune table élévatrice.
 
-### Demo axe_numérique
+### Simulation contrôleur d'axe CODESYS 
 ![](assets/axis_controller.png)
 
-### Description rapide
+### Description
 
 - L'automate virtuel CODESYS ControlWin 64 est connecté au contrôleur d'axe  simulé par WRSimulateur via Modbus TCP-IP.
 - L'interaction entre l'automate et le contrôleur passe par une table d'échange qui comprend 5 mots. (%QW5.0 à %QW5.2 et %IW5.0 à %IW5.1 dans l'exemple)
-- Le programme du projet **43-demo_axe_numerique_CODESYS.project** ajuste les bits de contrôle du registre **axis_ctrl** du contrôleur selon l'état des boutons connectés à ses entrées.
+- Le programme du projet **43-demo_controleur_axe_CODESYS.project** ajuste les bits de contrôle du registre **axis_ctrl** du contrôleur selon l'état des boutons connectés à ses entrées.
 - La vitesse et le point de consigne sont imposés par le programme (lignes 9 et 10 du programme ci-dessous)
 - On peut tester le comportement du positionnement de la table mobile en forçant les valeurs des registres **axis_setpoint** et **axis_speed**
+- Le contrôleur d'axe intègre un asservissement de position PID. Les paramètre Proportionnel, Intégral et Dérivé sont ajustables avec les boutons Kp, Ki et Kd.
+- On peut observer avec le grapheur la  position de l'axe en utilisant la variable spécifique **axis_position**.
 
-### Programme CODESYS axe_numérique   
+
+### Programme contôleur d'axe CODESYS
 ![](assets/axis_controller_CODESYS.png)
 
 
 
-## Paramètres IAI
-
-[SCON2-CE0401-1.1A.pdf](assets/SCON2-CE0401-1.1A.pdf)
+## Paramètres
 
 Les adresses des mots API utilisés dans les tableaux suivants sont donnés à titre d'exemple. Il est possible de choisir des adresses différentes dans la cartographie de l'API virtuel:
 
-![](fr/media/modbus_modules.png)
+![](media/modbus_modules.png)
 
 |Paramètre par défaut      |Description                    |
 | ------------------ | ------------ |

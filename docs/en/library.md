@@ -155,34 +155,40 @@ The visual of the initial 'electrovalve' object manipulated earlier is construct
 |courbe = |courbe de déclenchement \[B, C, D\]|
 |idn = |sensitivity of differential \[10 to 10000 mA\]|
 |diff_delay = |intentional delay of the DDR \[0 to 10000 ms\]|
+|initial_state = |Initial state of the component (closed/open) at simulation start (default = closed) \[1, 0]|
 
 |fuse_switche |library \_fuse_switches|
 | -------------------------------------------------- |---|
 |In = |fuse rating \[0.5 to 100 A\]|
 |delay = |intentional delay \[0 to 10000 ms\]|
 |type = |type of cartridge \[aM, gG\]|
+|initial_state = |Initial state of the component (closed/open) at simulation start (default = closed) \[1, 0]|
 
 |thermal_relay| library \_thermal_relays|
 | -------------------------------------------------- |---|
 |ith = |thermal threshold [0.1 to 100 A\]|
+|delay = |intentional delay \[0 to 10000 ms\]|
+|initial_state = |Initial state of the component (closed/open) at simulation start (default= closed) \[1, 0]|
 
 |magnetic_relay| library \_magnetic_relays|
 | -------------------------------------------------- |---|
-|imag = |magnetic threshold [0.1 to 100 A\]|
+|imag = |magnetic threshold [1 to 1000 A\]|
+|delay = |intentional delay \[0 to 10000 ms\]|
+|initial_state = |Initial state of the component (closed/open) at simulation start (default= closed) \[1, 0]|
 
 | AC_motor|library \_ac_motors|
 | -------------------------------------------------- |-------------|
-|Pu = |motor output power [90 W to 22 kW]|
-|nm = |nominal motor speed \[740 to 3000 rpm]|
+|Pu = |motor output power \[90 W to 22 kW\]|
+|nm = |nominal motor speed \[740 to 3000 rpm\] or \[-740 to -3000 rpm\]|
 |cos = |cos(phi) motor \[0.5 to 1\]|
 |efficiency = |motor efficiency \[0.5 to 1\]|
 |winding = |rated voltage at winding terminals \[127 to 400 V\]|
-|coupling = |winding coupling \[star, triangle]|
+|coupling = |winding coupling \[star, triangle\]|
 
 |DC_motor| library \_dc_motors|
 | -------------------------------------------------- |---|
-|pu = |motor output power [90 W to 22 kW]|
-|nm = |motor rated speed \[740 to 3000 rpm]|
+|pu = |motor output power \[90 W to 22 kW\]|
+|nm = |motor rated speed \[740 to 3000 rpm] or \[-740 to -3000 rpm\]|
 |armature = |armature voltage \[12 to 320 V\]|
 |efficiency =| motor efficiency \[0.5 to 1\]|
 
